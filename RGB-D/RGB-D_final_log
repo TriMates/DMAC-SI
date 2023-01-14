@@ -1,0 +1,2171 @@
+nohup: ignoring input
+2021-12-20 10:05:57.142922: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda/lib64:/usr/local/cuda-10.0/lib64
+2021-12-20 10:05:57.143043: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda/lib64:/usr/local/cuda-10.0/lib64
+2021-12-20 10:05:57.143055: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+++++++++++++++++++++++++++++++  Parameters  ++++++++++++++++++++++++++++++
+Namespace(AR=0.9, ARtime=1, Coo=1, Idec=1.0, K12q=0, UpdateCoo=2000, batch_size=64, dataset='rgbd', lc=0.1, lr=0.0001, maxiter=40000, pretrain_dir='./results/rgbd/ae_weights.h5', pretrain_epochs=500, save_dir='./results/rgbd', testing=False, verbose=1, view_first=1, weights=None)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+load: rgbd
+[[0.31542507 0.14875387 0.2240034  ... 0.03702536 0.17251343 0.05659543]
+ [0.45777452 0.09521218 0.3731238  ... 0.08754468 0.2911662  0.19127382]
+ [0.3074909  0.17579031 0.3051502  ... 0.11492065 0.16238782 0.09043926]
+ ...
+ [0.4334729  0.1935141  0.40976724 ... 0.13355568 0.3435019  0.34113276]
+ [0.1360395  0.13578352 0.2586973  ... 0.08699358 0.12479591 0.15719129]
+ [0.21067008 0.27108306 0.27316236 ... 0.11637187 0.24384442 0.09583196]]
+(1449,)
+[(2048,), (300,)]
+['kld', 'mse', 'binary_crossentropy', 'kld', 'mse', 'binary_crossentropy', <function self_bce at 0x7f7ed6813e18>, 'kld']
+[0.001, 1.0, 0.005, 0.001, 1.0, 0.005, 0.001, 1]
+n_clusters:13
+2021-12-20 10:05:58.259162: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-12-20 10:05:58.300974: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-12-20 10:05:58.302119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 1 with properties: 
+pciBusID: 0000:af:00.0 name: Tesla V100-DGXS-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-12-20 10:05:58.302465: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-12-20 10:05:58.305300: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-12-20 10:05:58.307626: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-12-20 10:05:58.308048: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-12-20 10:05:58.310828: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-12-20 10:05:58.312509: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-12-20 10:05:58.318450: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-12-20 10:05:58.363371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0, 1
+2021-12-20 10:05:58.363777: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2021-12-20 10:05:58.376356: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2021-12-20 10:05:58.379385: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f78cb74000 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-12-20 10:05:58.379424: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-12-20 10:05:58.616351: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f78b5a99e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-12-20 10:05:58.616416: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100S-PCIE-32GB, Compute Capability 7.0
+2021-12-20 10:05:58.616775: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): Tesla V100-DGXS-16GB, Compute Capability 7.0
+2021-12-20 10:05:58.618670: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100S-PCIE-32GB computeCapability: 7.0
+coreClock: 1.597GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 1.03TiB/s
+2021-12-20 10:05:58.619311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1555] Found device 1 with properties: 
+pciBusID: 0000:af:00.0 name: Tesla V100-DGXS-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-12-20 10:05:58.619443: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-12-20 10:05:58.619476: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-12-20 10:05:58.619501: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-12-20 10:05:58.619526: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-12-20 10:05:58.619550: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-12-20 10:05:58.619577: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-12-20 10:05:58.619620: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-12-20 10:05:58.622902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1697] Adding visible gpu devices: 0, 1
+2021-12-20 10:05:58.622987: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-12-20 10:05:58.625486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-12-20 10:05:58.625515: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102]      0 1 
+2021-12-20 10:05:58.625529: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 0:   N Y 
+2021-12-20 10:05:58.625538: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] 1:   Y N 
+2021-12-20 10:05:58.630192: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 22159 MB memory) -> physical GPU (device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2021-12-20 10:05:58.631379: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1241] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 1486 MB memory) -> physical GPU (device: 1, name: Tesla V100-DGXS-16GB, pci bus id: 0000:af:00.0, compute capability: 7.0)
+Model: "model_5"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input1 (InputLayer)             [(None, 2048)]       0                                            
+__________________________________________________________________________________________________
+input2 (InputLayer)             [(None, 300)]        0                                            
+__________________________________________________________________________________________________
+v1_encoder_0 (Dense)            (None, 500)          1024500     input1[0][0]                     
+__________________________________________________________________________________________________
+v2_encoder_0 (Dense)            (None, 500)          150500      input2[0][0]                     
+__________________________________________________________________________________________________
+v1_encoder_1 (Dense)            (None, 500)          250500      v1_encoder_0[0][0]               
+__________________________________________________________________________________________________
+v2_encoder_1 (Dense)            (None, 500)          250500      v2_encoder_0[0][0]               
+__________________________________________________________________________________________________
+v1_encoder_2 (Dense)            (None, 2000)         1002000     v1_encoder_1[0][0]               
+__________________________________________________________________________________________________
+v2_encoder_2 (Dense)            (None, 2000)         1002000     v2_encoder_1[0][0]               
+__________________________________________________________________________________________________
+embedding1 (Dense)              (None, 10)           20010       v1_encoder_2[0][0]               
+__________________________________________________________________________________________________
+embedding2 (Dense)              (None, 10)           20010       v2_encoder_2[0][0]               
+__________________________________________________________________________________________________
+v1_decoder_3 (Dense)            (None, 2000)         22000       embedding1[0][0]                 
+__________________________________________________________________________________________________
+v2_decoder_3 (Dense)            (None, 2000)         22000       embedding2[0][0]                 
+__________________________________________________________________________________________________
+v1_decoder_2 (Dense)            (None, 500)          1000500     v1_decoder_3[0][0]               
+__________________________________________________________________________________________________
+v2_decoder_2 (Dense)            (None, 500)          1000500     v2_decoder_3[0][0]               
+__________________________________________________________________________________________________
+v1_decoder_1 (Dense)            (None, 500)          250500      v1_decoder_2[0][0]               
+__________________________________________________________________________________________________
+v2_decoder_1 (Dense)            (None, 500)          250500      v2_decoder_2[0][0]               
+__________________________________________________________________________________________________
+v1_decoder_0 (Dense)            (None, 2048)         1026048     v1_decoder_1[0][0]               
+__________________________________________________________________________________________________
+v2_decoder_0 (Dense)            (None, 300)          150300      v2_decoder_1[0][0]               
+__________________________________________________________________________________________________
+tf_op_layer_concat (TensorFlowO [(None, 20)]         0           embedding1[0][0]                 
+                                                                 embedding2[0][0]                 
+__________________________________________________________________________________________________
+clustering1 (ClusteringLayer)   (None, 13)           130         embedding1[0][0]                 
+__________________________________________________________________________________________________
+model (Model)                   (None, 1)            1180673     v1_decoder_0[0][0]               
+__________________________________________________________________________________________________
+clustering2 (ClusteringLayer)   (None, 13)           130         embedding2[0][0]                 
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 1)            285697      v2_decoder_0[0][0]               
+__________________________________________________________________________________________________
+rcclustering (RCLayer_softmax)  (None, 13)           260         tf_op_layer_concat[0][0]         
+==================================================================================================
+Total params: 8,909,258
+Trainable params: 7,442,888
+Non-trainable params: 1,466,370
+__________________________________________________________________________________________________
+Time for pretraining: 0s
+Begin clustering: ------------------------------------------------------------
+Update Coo: 2000
+Save interval 40000
+Initializing cluster centers with k-means.
+2021-12-20 10:06:00.829173: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+Start-1: acc=0.37957, nmi=0.38742, v-measure=0.38653, ari=0.22623
+Start-2: acc=0.14769, nmi=0.04651, v-measure=0.04640, ari=0.01040
+
+
+ACC=0.39821, NMI=0.38026, V-Measure=0.37937, ARI=0.23095
+rc ACC=0.41684, NMI=0.38080, V-Measure=0.38002, ARI=0.22675
+aligned ratio: 7.18%. 1449
+V1-Iter 0: acc=0.37957, nmi=0.38742, v-measure=0.38653, ari=0.22623; loss=0.00000
+V2-Iter 0: acc=0.14769, nmi=0.04651, v-measure=0.04640, ari=0.01040; loss=0.00000
+Multi-view discriminative representation learning
+Multi-view discriminative representation learning
+unify target distribution of KL loss
+print: ./results/rgbd/0
+rc ACC=0.41684, NMI=0.38080, V-Measure=0.38002, ARI=0.22675
+best ACC=0.41684, NMI=0.38080, V-Measure=0.38002, ARI=0.22675
+saving model to: ./results/rgbd/model_final.h50
+rc ACC=0.41684, NMI=0.38080, V-Measure=0.38002, ARI=0.22675
+print: ./results/rgbd/10
+rc ACC=0.41753, NMI=0.38380, V-Measure=0.38302, ARI=0.22658
+best ACC=0.41753, NMI=0.38380, V-Measure=0.38302, ARI=0.22658
+saving model to: ./results/rgbd/model_final.h510
+print: ./results/rgbd/20
+rc ACC=0.36922, NMI=0.33976, V-Measure=0.33931, ARI=0.11553
+print: ./results/rgbd/30
+rc ACC=0.35059, NMI=0.32742, V-Measure=0.32599, ARI=0.08960
+print: ./results/rgbd/40
+rc ACC=0.36784, NMI=0.34141, V-Measure=0.34077, ARI=0.13000
+print: ./results/rgbd/50
+rc ACC=0.35128, NMI=0.33090, V-Measure=0.33058, ARI=0.12453
+print: ./results/rgbd/60
+rc ACC=0.35956, NMI=0.33614, V-Measure=0.33586, ARI=0.13202
+print: ./results/rgbd/70
+rc ACC=0.35956, NMI=0.33273, V-Measure=0.33241, ARI=0.13122
+print: ./results/rgbd/80
+rc ACC=0.36715, NMI=0.33901, V-Measure=0.33886, ARI=0.14239
+print: ./results/rgbd/90
+rc ACC=0.37336, NMI=0.34222, V-Measure=0.34205, ARI=0.15096
+print: ./results/rgbd/100
+rc ACC=0.37198, NMI=0.34364, V-Measure=0.34357, ARI=0.15699
+print: ./results/rgbd/110
+rc ACC=0.39337, NMI=0.36588, V-Measure=0.36582, ARI=0.18116
+print: ./results/rgbd/120
+rc ACC=0.36232, NMI=0.33850, V-Measure=0.33838, ARI=0.14956
+print: ./results/rgbd/130
+rc ACC=0.38302, NMI=0.35423, V-Measure=0.35415, ARI=0.17034
+print: ./results/rgbd/140
+rc ACC=0.36991, NMI=0.34909, V-Measure=0.34895, ARI=0.16065
+print: ./results/rgbd/150
+rc ACC=0.38371, NMI=0.35318, V-Measure=0.35314, ARI=0.17302
+print: ./results/rgbd/160
+rc ACC=0.37336, NMI=0.34854, V-Measure=0.34837, ARI=0.16128
+print: ./results/rgbd/170
+rc ACC=0.38095, NMI=0.35375, V-Measure=0.35371, ARI=0.17009
+print: ./results/rgbd/180
+rc ACC=0.37750, NMI=0.35637, V-Measure=0.35628, ARI=0.17062
+print: ./results/rgbd/190
+rc ACC=0.36370, NMI=0.34186, V-Measure=0.34177, ARI=0.15640
+print: ./results/rgbd/200
+rc ACC=0.38233, NMI=0.35601, V-Measure=0.35595, ARI=0.17349
+rc ACC=0.38233, NMI=0.35601, V-Measure=0.35595, ARI=0.17349
+print: ./results/rgbd/210
+rc ACC=0.37474, NMI=0.34811, V-Measure=0.34808, ARI=0.16613
+print: ./results/rgbd/220
+rc ACC=0.39130, NMI=0.36237, V-Measure=0.36235, ARI=0.18469
+print: ./results/rgbd/230
+rc ACC=0.36922, NMI=0.34888, V-Measure=0.34876, ARI=0.15940
+print: ./results/rgbd/240
+rc ACC=0.38302, NMI=0.35589, V-Measure=0.35587, ARI=0.17385
+print: ./results/rgbd/250
+rc ACC=0.38233, NMI=0.35990, V-Measure=0.35983, ARI=0.17309
+print: ./results/rgbd/260
+rc ACC=0.38233, NMI=0.35226, V-Measure=0.35224, ARI=0.17563
+print: ./results/rgbd/270
+rc ACC=0.37888, NMI=0.35386, V-Measure=0.35382, ARI=0.17568
+print: ./results/rgbd/280
+rc ACC=0.37681, NMI=0.35137, V-Measure=0.35135, ARI=0.17164
+print: ./results/rgbd/290
+rc ACC=0.39061, NMI=0.36290, V-Measure=0.36288, ARI=0.18111
+print: ./results/rgbd/300
+rc ACC=0.37612, NMI=0.35553, V-Measure=0.35545, ARI=0.16791
+print: ./results/rgbd/310
+rc ACC=0.38785, NMI=0.35803, V-Measure=0.35802, ARI=0.18056
+print: ./results/rgbd/320
+rc ACC=0.37612, NMI=0.35189, V-Measure=0.35183, ARI=0.16802
+print: ./results/rgbd/330
+rc ACC=0.38371, NMI=0.35589, V-Measure=0.35588, ARI=0.17378
+print: ./results/rgbd/340
+rc ACC=0.38509, NMI=0.35908, V-Measure=0.35907, ARI=0.18154
+print: ./results/rgbd/350
+rc ACC=0.37681, NMI=0.35126, V-Measure=0.35123, ARI=0.16941
+print: ./results/rgbd/360
+rc ACC=0.37957, NMI=0.35618, V-Measure=0.35615, ARI=0.17522
+print: ./results/rgbd/370
+rc ACC=0.37336, NMI=0.35159, V-Measure=0.35155, ARI=0.16526
+print: ./results/rgbd/380
+rc ACC=0.39545, NMI=0.35915, V-Measure=0.35914, ARI=0.18897
+print: ./results/rgbd/390
+rc ACC=0.37060, NMI=0.35140, V-Measure=0.35133, ARI=0.15849
+print: ./results/rgbd/400
+rc ACC=0.38854, NMI=0.35757, V-Measure=0.35757, ARI=0.18679
+rc ACC=0.38854, NMI=0.35757, V-Measure=0.35757, ARI=0.18679
+print: ./results/rgbd/410
+rc ACC=0.38716, NMI=0.35854, V-Measure=0.35853, ARI=0.17594
+print: ./results/rgbd/420
+rc ACC=0.38854, NMI=0.35586, V-Measure=0.35586, ARI=0.18617
+print: ./results/rgbd/430
+rc ACC=0.38785, NMI=0.35831, V-Measure=0.35830, ARI=0.18005
+print: ./results/rgbd/440
+rc ACC=0.38509, NMI=0.35709, V-Measure=0.35709, ARI=0.18349
+print: ./results/rgbd/450
+rc ACC=0.39959, NMI=0.36574, V-Measure=0.36573, ARI=0.19705
+print: ./results/rgbd/460
+rc ACC=0.36784, NMI=0.34998, V-Measure=0.34988, ARI=0.15655
+print: ./results/rgbd/470
+rc ACC=0.39959, NMI=0.37561, V-Measure=0.36561, ARI=0.20095
+print: ./results/rgbd/480
+rc ACC=0.38095, NMI=0.37692, V-Measure=0.35689, ARI=0.16973
+print: ./results/rgbd/490
+rc ACC=0.38026, NMI=0.35282, V-Measure=0.35282, ARI=0.18215
+print: ./results/rgbd/500
+rc ACC=0.38785, NMI=0.36200, V-Measure=0.36200, ARI=0.18905
+print: ./results/rgbd/510
+rc ACC=0.37888, NMI=0.37041, V-Measure=0.35040, ARI=0.17715
+print: ./results/rgbd/520
+rc ACC=0.40166, NMI=0.36347, V-Measure=0.36347, ARI=0.19705
+print: ./results/rgbd/530
+rc ACC=0.38095, NMI=0.35341, V-Measure=0.35338, ARI=0.16913
+print: ./results/rgbd/540
+rc ACC=0.37819, NMI=0.35104, V-Measure=0.35103, ARI=0.17881
+print: ./results/rgbd/550
+rc ACC=0.37405, NMI=0.37227, V-Measure=0.35221, ARI=0.16532
+print: ./results/rgbd/560
+rc ACC=0.38026, NMI=0.35198, V-Measure=0.35198, ARI=0.18031
+print: ./results/rgbd/570
+rc ACC=0.39130, NMI=0.35995, V-Measure=0.35995, ARI=0.18844
+print: ./results/rgbd/580
+rc ACC=0.36853, NMI=0.34800, V-Measure=0.34797, ARI=0.16708
+print: ./results/rgbd/590
+rc ACC=0.39959, NMI=0.36693, V-Measure=0.36693, ARI=0.20169
+print: ./results/rgbd/600
+rc ACC=0.37129, NMI=0.34800, V-Measure=0.34800, ARI=0.17112
+rc ACC=0.37129, NMI=0.34800, V-Measure=0.34800, ARI=0.17112
+print: ./results/rgbd/610
+rc ACC=0.39890, NMI=0.38658, V-Measure=0.36658, ARI=0.19912
+print: ./results/rgbd/620
+rc ACC=0.37750, NMI=0.35370, V-Measure=0.35368, ARI=0.16931
+print: ./results/rgbd/630
+rc ACC=0.40235, NMI=0.37039, V-Measure=0.37039, ARI=0.20707
+print: ./results/rgbd/640
+rc ACC=0.38854, NMI=0.35816, V-Measure=0.35816, ARI=0.18351
+print: ./results/rgbd/650
+rc ACC=0.37405, NMI=0.34727, V-Measure=0.34727, ARI=0.17904
+print: ./results/rgbd/660
+rc ACC=0.39890, NMI=0.36534, V-Measure=0.36534, ARI=0.20203
+print: ./results/rgbd/670
+rc ACC=0.39199, NMI=0.35870, V-Measure=0.35870, ARI=0.18574
+print: ./results/rgbd/680
+rc ACC=0.39476, NMI=0.36324, V-Measure=0.36323, ARI=0.19572
+print: ./results/rgbd/690
+rc ACC=0.36853, NMI=0.37007, V-Measure=0.35001, ARI=0.16091
+print: ./results/rgbd/700
+rc ACC=0.39545, NMI=0.36300, V-Measure=0.36299, ARI=0.20088
+print: ./results/rgbd/710
+rc ACC=0.39545, NMI=0.36433, V-Measure=0.36433, ARI=0.19515
+print: ./results/rgbd/720
+rc ACC=0.37336, NMI=0.35333, V-Measure=0.35332, ARI=0.17636
+print: ./results/rgbd/730
+rc ACC=0.38992, NMI=0.36158, V-Measure=0.36158, ARI=0.19412
+print: ./results/rgbd/740
+rc ACC=0.38854, NMI=0.35882, V-Measure=0.35882, ARI=0.18892
+print: ./results/rgbd/750
+rc ACC=0.39821, NMI=0.36986, V-Measure=0.36986, ARI=0.20677
+print: ./results/rgbd/760
+rc ACC=0.37060, NMI=0.34919, V-Measure=0.34917, ARI=0.16713
+print: ./results/rgbd/770
+rc ACC=0.39476, NMI=0.36495, V-Measure=0.36495, ARI=0.20063
+print: ./results/rgbd/780
+rc ACC=0.38371, NMI=0.35613, V-Measure=0.35613, ARI=0.17835
+print: ./results/rgbd/790
+rc ACC=0.38854, NMI=0.36197, V-Measure=0.36197, ARI=0.19157
+print: ./results/rgbd/800
+rc ACC=0.39268, NMI=0.36445, V-Measure=0.36445, ARI=0.19691
+rc ACC=0.39268, NMI=0.36445, V-Measure=0.36445, ARI=0.19691
+print: ./results/rgbd/810
+rc ACC=0.38992, NMI=0.36194, V-Measure=0.36194, ARI=0.19410
+print: ./results/rgbd/820
+rc ACC=0.38578, NMI=0.36115, V-Measure=0.36115, ARI=0.19147
+print: ./results/rgbd/830
+rc ACC=0.39268, NMI=0.36395, V-Measure=0.36395, ARI=0.19452
+print: ./results/rgbd/840
+rc ACC=0.39476, NMI=0.36429, V-Measure=0.36428, ARI=0.20126
+print: ./results/rgbd/850
+rc ACC=0.37405, NMI=0.35377, V-Measure=0.35375, ARI=0.17108
+print: ./results/rgbd/860
+rc ACC=0.38923, NMI=0.36225, V-Measure=0.36224, ARI=0.19642
+print: ./results/rgbd/870
+rc ACC=0.39130, NMI=0.36424, V-Measure=0.36424, ARI=0.19697
+print: ./results/rgbd/880
+rc ACC=0.37543, NMI=0.35063, V-Measure=0.35063, ARI=0.18216
+print: ./results/rgbd/890
+rc ACC=0.40442, NMI=0.37064, V-Measure=0.37064, ARI=0.21067
+print: ./results/rgbd/900
+rc ACC=0.38371, NMI=0.35729, V-Measure=0.35729, ARI=0.18561
+print: ./results/rgbd/910
+rc ACC=0.38095, NMI=0.35953, V-Measure=0.35952, ARI=0.18978
+print: ./results/rgbd/920
+rc ACC=0.37474, NMI=0.35662, V-Measure=0.35659, ARI=0.17351
+print: ./results/rgbd/930
+rc ACC=0.40649, NMI=0.37091, V-Measure=0.37090, ARI=0.26645
+print: ./results/rgbd/940
+rc ACC=0.39545, NMI=0.36676, V-Measure=0.36676, ARI=0.29907
+print: ./results/rgbd/950
+rc ACC=0.37888, NMI=0.35374, V-Measure=0.35374, ARI=0.18413
+print: ./results/rgbd/960
+rc ACC=0.38854, NMI=0.36294, V-Measure=0.36294, ARI=0.19714
+print: ./results/rgbd/970
+rc ACC=0.38440, NMI=0.36162, V-Measure=0.36162, ARI=0.19008
+print: ./results/rgbd/980
+rc ACC=0.39061, NMI=0.37260, V-Measure=0.36260, ARI=0.25568
+print: ./results/rgbd/990
+rc ACC=0.37474, NMI=0.35654, V-Measure=0.35652, ARI=0.17621
+print: ./results/rgbd/1000
+rc ACC=0.39821, NMI=0.36892, V-Measure=0.36892, ARI=0.21043
+rc ACC=0.39821, NMI=0.36892, V-Measure=0.36892, ARI=0.21043
+print: ./results/rgbd/1010
+rc ACC=0.38716, NMI=0.36200, V-Measure=0.36200, ARI=0.19425
+print: ./results/rgbd/1020
+rc ACC=0.37681, NMI=0.35623, V-Measure=0.35623, ARI=0.18680
+print: ./results/rgbd/1030
+rc ACC=0.39268, NMI=0.37192, V-Measure=0.36192, ARI=0.19756
+print: ./results/rgbd/1040
+rc ACC=0.37474, NMI=0.35290, V-Measure=0.35290, ARI=0.17821
+print: ./results/rgbd/1050
+rc ACC=0.38371, NMI=0.36062, V-Measure=0.36062, ARI=0.19335
+print: ./results/rgbd/1060
+rc ACC=0.37198, NMI=0.35506, V-Measure=0.35506, ARI=0.17711
+print: ./results/rgbd/1070
+rc ACC=0.39683, NMI=0.37950, V-Measure=0.36950, ARI=0.21214
+print: ./results/rgbd/1080
+rc ACC=0.38302, NMI=0.35973, V-Measure=0.35972, ARI=0.18466
+print: ./results/rgbd/1090
+rc ACC=0.39890, NMI=0.36878, V-Measure=0.36876, ARI=0.21181
+print: ./results/rgbd/1100
+rc ACC=0.38785, NMI=0.36044, V-Measure=0.36044, ARI=0.19518
+print: ./results/rgbd/1110
+rc ACC=0.37612, NMI=0.35340, V-Measure=0.35340, ARI=0.18739
+print: ./results/rgbd/1120
+rc ACC=0.40097, NMI=0.38611, V-Measure=0.36610, ARI=0.21384
+print: ./results/rgbd/1130
+rc ACC=0.39821, NMI=0.36757, V-Measure=0.36755, ARI=0.20514
+print: ./results/rgbd/1140
+rc ACC=0.38716, NMI=0.36319, V-Measure=0.36318, ARI=0.19775
+print: ./results/rgbd/1150
+rc ACC=0.38026, NMI=0.35572, V-Measure=0.35571, ARI=0.18025
+print: ./results/rgbd/1160
+rc ACC=0.39890, NMI=0.36559, V-Measure=0.36557, ARI=0.21272
+print: ./results/rgbd/1170
+rc ACC=0.39545, NMI=0.36239, V-Measure=0.36239, ARI=0.20134
+print: ./results/rgbd/1180
+rc ACC=0.38095, NMI=0.35978, V-Measure=0.35978, ARI=0.18718
+print: ./results/rgbd/1190
+rc ACC=0.39199, NMI=0.36358, V-Measure=0.36358, ARI=0.20510
+print: ./results/rgbd/1200
+rc ACC=0.39683, NMI=0.36545, V-Measure=0.36543, ARI=0.20922
+rc ACC=0.39683, NMI=0.36545, V-Measure=0.36543, ARI=0.20922
+print: ./results/rgbd/1210
+rc ACC=0.38716, NMI=0.36170, V-Measure=0.36170, ARI=0.19696
+print: ./results/rgbd/1220
+rc ACC=0.38233, NMI=0.35829, V-Measure=0.35829, ARI=0.18813
+print: ./results/rgbd/1230
+rc ACC=0.39614, NMI=0.36624, V-Measure=0.36622, ARI=0.21441
+print: ./results/rgbd/1240
+rc ACC=0.39061, NMI=0.36510, V-Measure=0.36510, ARI=0.20359
+print: ./results/rgbd/1250
+rc ACC=0.38440, NMI=0.35760, V-Measure=0.35760, ARI=0.19276
+print: ./results/rgbd/1260
+rc ACC=0.39959, NMI=0.36557, V-Measure=0.36557, ARI=0.20459
+print: ./results/rgbd/1270
+rc ACC=0.38854, NMI=0.36148, V-Measure=0.36148, ARI=0.19863
+print: ./results/rgbd/1280
+rc ACC=0.39268, NMI=0.36412, V-Measure=0.36412, ARI=0.20606
+print: ./results/rgbd/1290
+rc ACC=0.38992, NMI=0.36198, V-Measure=0.36198, ARI=0.19922
+print: ./results/rgbd/1300
+rc ACC=0.39130, NMI=0.36284, V-Measure=0.36283, ARI=0.20557
+print: ./results/rgbd/1310
+rc ACC=0.38164, NMI=0.35768, V-Measure=0.35768, ARI=0.18999
+print: ./results/rgbd/1320
+rc ACC=0.38509, NMI=0.36001, V-Measure=0.36001, ARI=0.19581
+print: ./results/rgbd/1330
+rc ACC=0.39545, NMI=0.36102, V-Measure=0.36102, ARI=0.20185
+print: ./results/rgbd/1340
+rc ACC=0.38302, NMI=0.35697, V-Measure=0.35696, ARI=0.19287
+print: ./results/rgbd/1350
+rc ACC=0.40235, NMI=0.38465, V-Measure=0.36464, ARI=0.21535
+print: ./results/rgbd/1360
+rc ACC=0.39199, NMI=0.36535, V-Measure=0.36533, ARI=0.20521
+print: ./results/rgbd/1370
+rc ACC=0.38509, NMI=0.35641, V-Measure=0.35641, ARI=0.19476
+print: ./results/rgbd/1380
+rc ACC=0.38440, NMI=0.35670, V-Measure=0.35670, ARI=0.18806
+print: ./results/rgbd/1390
+rc ACC=0.39476, NMI=0.36449, V-Measure=0.36447, ARI=0.21090
+print: ./results/rgbd/1400
+rc ACC=0.38992, NMI=0.35798, V-Measure=0.35798, ARI=0.19658
+rc ACC=0.38992, NMI=0.35798, V-Measure=0.35798, ARI=0.19658
+print: ./results/rgbd/1410
+rc ACC=0.38302, NMI=0.35738, V-Measure=0.35738, ARI=0.19120
+print: ./results/rgbd/1420
+rc ACC=0.39752, NMI=0.36061, V-Measure=0.36061, ARI=0.20558
+print: ./results/rgbd/1430
+rc ACC=0.39476, NMI=0.36913, V-Measure=0.36910, ARI=0.21367
+print: ./results/rgbd/1440
+rc ACC=0.38854, NMI=0.35954, V-Measure=0.35954, ARI=0.19665
+print: ./results/rgbd/1450
+rc ACC=0.38509, NMI=0.35693, V-Measure=0.35693, ARI=0.18834
+print: ./results/rgbd/1460
+rc ACC=0.39337, NMI=0.36614, V-Measure=0.36612, ARI=0.21304
+print: ./results/rgbd/1470
+rc ACC=0.39614, NMI=0.36017, V-Measure=0.36017, ARI=0.20290
+print: ./results/rgbd/1480
+rc ACC=0.37474, NMI=0.35185, V-Measure=0.35185, ARI=0.18368
+print: ./results/rgbd/1490
+rc ACC=0.39821, NMI=0.36292, V-Measure=0.36292, ARI=0.20493
+print: ./results/rgbd/1500
+rc ACC=0.39130, NMI=0.36623, V-Measure=0.36620, ARI=0.21078
+print: ./results/rgbd/1510
+rc ACC=0.39130, NMI=0.35764, V-Measure=0.35764, ARI=0.19624
+print: ./results/rgbd/1520
+rc ACC=0.39476, NMI=0.36337, V-Measure=0.36336, ARI=0.19827
+print: ./results/rgbd/1530
+rc ACC=0.39821, NMI=0.36512, V-Measure=0.36509, ARI=0.21595
+print: ./results/rgbd/1540
+rc ACC=0.40166, NMI=0.38656, V-Measure=0.36656, ARI=0.20771
+print: ./results/rgbd/1550
+rc ACC=0.39199, NMI=0.36355, V-Measure=0.36355, ARI=0.20000
+print: ./results/rgbd/1560
+rc ACC=0.39752, NMI=0.36465, V-Measure=0.36464, ARI=0.20444
+print: ./results/rgbd/1570
+rc ACC=0.39268, NMI=0.36690, V-Measure=0.36685, ARI=0.21149
+print: ./results/rgbd/1580
+rc ACC=0.40166, NMI=0.36190, V-Measure=0.36190, ARI=0.20746
+print: ./results/rgbd/1590
+rc ACC=0.39890, NMI=0.36345, V-Measure=0.36343, ARI=0.20617
+print: ./results/rgbd/1600
+rc ACC=0.39130, NMI=0.36589, V-Measure=0.36588, ARI=0.20773
+rc ACC=0.39130, NMI=0.36589, V-Measure=0.36588, ARI=0.20773
+print: ./results/rgbd/1610
+rc ACC=0.40304, NMI=0.36543, V-Measure=0.36542, ARI=0.20850
+print: ./results/rgbd/1620
+rc ACC=0.40511, NMI=0.36810, V-Measure=0.36805, ARI=0.21915
+print: ./results/rgbd/1630
+rc ACC=0.40097, NMI=0.36490, V-Measure=0.36489, ARI=0.20059
+print: ./results/rgbd/1640
+rc ACC=0.39268, NMI=0.36671, V-Measure=0.36669, ARI=0.20409
+print: ./results/rgbd/1650
+rc ACC=0.41132, NMI=0.37536, V-Measure=0.36535, ARI=0.21872
+print: ./results/rgbd/1660
+rc ACC=0.40718, NMI=0.36896, V-Measure=0.36890, ARI=0.22085
+print: ./results/rgbd/1670
+rc ACC=0.39406, NMI=0.36544, V-Measure=0.36541, ARI=0.20675
+print: ./results/rgbd/1680
+rc ACC=0.40649, NMI=0.36834, V-Measure=0.36834, ARI=0.20761
+print: ./results/rgbd/1690
+rc ACC=0.40373, NMI=0.36515, V-Measure=0.36512, ARI=0.21878
+print: ./results/rgbd/1700
+rc ACC=0.39959, NMI=0.36225, V-Measure=0.36224, ARI=0.20832
+print: ./results/rgbd/1710
+rc ACC=0.38992, NMI=0.36430, V-Measure=0.36429, ARI=0.19402
+print: ./results/rgbd/1720
+rc ACC=0.41408, NMI=0.36705, V-Measure=0.36704, ARI=0.21890
+print: ./results/rgbd/1730
+rc ACC=0.41477, NMI=0.37955, V-Measure=0.36951, ARI=0.22490
+print: ./results/rgbd/1740
+rc ACC=0.39268, NMI=0.36172, V-Measure=0.36171, ARI=0.20006
+print: ./results/rgbd/1750
+rc ACC=0.40925, NMI=0.36814, V-Measure=0.36814, ARI=0.21724
+print: ./results/rgbd/1760
+rc ACC=0.40856, NMI=0.36736, V-Measure=0.36731, ARI=0.21975
+print: ./results/rgbd/1770
+rc ACC=0.41546, NMI=0.36895, V-Measure=0.36894, ARI=0.21503
+print: ./results/rgbd/1780
+rc ACC=0.40511, NMI=0.36774, V-Measure=0.36771, ARI=0.21209
+print: ./results/rgbd/1790
+rc ACC=0.40856, NMI=0.38541, V-Measure=0.36539, ARI=0.21075
+print: ./results/rgbd/1800
+rc ACC=0.40235, NMI=0.36432, V-Measure=0.36428, ARI=0.21401
+rc ACC=0.40235, NMI=0.36432, V-Measure=0.36428, ARI=0.21401
+print: ./results/rgbd/1810
+rc ACC=0.40787, NMI=0.36606, V-Measure=0.36605, ARI=0.21596
+print: ./results/rgbd/1820
+rc ACC=0.41477, NMI=0.36768, V-Measure=0.36765, ARI=0.22268
+print: ./results/rgbd/1830
+rc ACC=0.39821, NMI=0.36321, V-Measure=0.36318, ARI=0.20744
+print: ./results/rgbd/1840
+rc ACC=0.41339, NMI=0.36641, V-Measure=0.36641, ARI=0.21629
+print: ./results/rgbd/1850
+rc ACC=0.41063, NMI=0.36452, V-Measure=0.36446, ARI=0.21979
+print: ./results/rgbd/1860
+rc ACC=0.39959, NMI=0.36277, V-Measure=0.36276, ARI=0.20297
+print: ./results/rgbd/1870
+rc ACC=0.39959, NMI=0.36444, V-Measure=0.36442, ARI=0.20904
+print: ./results/rgbd/1880
+rc ACC=0.42374, NMI=0.38603, V-Measure=0.37600, ARI=0.23281
+best ACC=0.42374, NMI=0.38603, V-Measure=0.37600, ARI=0.23281
+saving model to: ./results/rgbd/model_final.h51880
+print: ./results/rgbd/1890
+rc ACC=0.41615, NMI=0.36991, V-Measure=0.36985, ARI=0.22759
+print: ./results/rgbd/1900
+rc ACC=0.39683, NMI=0.36200, V-Measure=0.36200, ARI=0.20134
+print: ./results/rgbd/1910
+rc ACC=0.41339, NMI=0.36586, V-Measure=0.36586, ARI=0.21782
+print: ./results/rgbd/1920
+rc ACC=0.41891, NMI=0.36658, V-Measure=0.36649, ARI=0.23076
+print: ./results/rgbd/1930
+rc ACC=0.40304, NMI=0.36491, V-Measure=0.36490, ARI=0.20398
+print: ./results/rgbd/1940
+rc ACC=0.40787, NMI=0.36575, V-Measure=0.36572, ARI=0.21655
+print: ./results/rgbd/1950
+rc ACC=0.41822, NMI=0.36980, V-Measure=0.36977, ARI=0.22813
+print: ./results/rgbd/1960
+rc ACC=0.42305, NMI=0.37524, V-Measure=0.37514, ARI=0.23760
+print: ./results/rgbd/1970
+rc ACC=0.40166, NMI=0.36707, V-Measure=0.36706, ARI=0.20845
+print: ./results/rgbd/1980
+rc ACC=0.42926, NMI=0.38373, V-Measure=0.37371, ARI=0.24091
+best ACC=0.42926, NMI=0.38373, V-Measure=0.37371, ARI=0.24091
+saving model to: ./results/rgbd/model_final.h51980
+print: ./results/rgbd/1990
+rc ACC=0.41891, NMI=0.36171, V-Measure=0.36159, ARI=0.23291
+
+
+ACC=0.43754, NMI=0.39191, V-Measure=0.39129, ARI=0.26300
+rc ACC=0.40304, NMI=0.36334, V-Measure=0.36333, ARI=0.20344
+saving model to: ./results/rgbd/model_final.h52000
+aligned ratio: 8.76%. 1449
+V1-Iter 2000: acc=0.44513, nmi=0.39151, v-measure=0.39149, ari=0.25929; loss=0.00698
+V2-Iter 2000: acc=0.15321, nmi=0.05754, v-measure=0.05742, ari=0.01794; loss=0.00585
+Multi-view discriminative representation learning
+Multi-view discriminative representation learning
+unify target distribution of KL loss
+print: ./results/rgbd/2000
+rc ACC=0.40304, NMI=0.36334, V-Measure=0.36333, ARI=0.20344
+rc ACC=0.40304, NMI=0.36334, V-Measure=0.36333, ARI=0.20344
+print: ./results/rgbd/2010
+rc ACC=0.41201, NMI=0.36982, V-Measure=0.36975, ARI=0.22342
+print: ./results/rgbd/2020
+rc ACC=0.41408, NMI=0.36992, V-Measure=0.36987, ARI=0.22287
+print: ./results/rgbd/2030
+rc ACC=0.40994, NMI=0.36954, V-Measure=0.36947, ARI=0.21998
+print: ./results/rgbd/2040
+rc ACC=0.40925, NMI=0.36429, V-Measure=0.36426, ARI=0.21096
+print: ./results/rgbd/2050
+rc ACC=0.42788, NMI=0.37789, V-Measure=0.36783, ARI=0.24286
+print: ./results/rgbd/2060
+rc ACC=0.41615, NMI=0.36151, V-Measure=0.36143, ARI=0.23177
+print: ./results/rgbd/2070
+rc ACC=0.41822, NMI=0.37732, V-Measure=0.36730, ARI=0.22381
+print: ./results/rgbd/2080
+rc ACC=0.41684, NMI=0.37199, V-Measure=0.36187, ARI=0.23116
+print: ./results/rgbd/2090
+rc ACC=0.40856, NMI=0.37415, V-Measure=0.36413, ARI=0.21614
+print: ./results/rgbd/2100
+rc ACC=0.40994, NMI=0.37488, V-Measure=0.36479, ARI=0.22165
+print: ./results/rgbd/2110
+rc ACC=0.40925, NMI=0.37679, V-Measure=0.36677, ARI=0.21313
+print: ./results/rgbd/2120
+rc ACC=0.43961, NMI=0.36304, V-Measure=0.36294, ARI=0.24616
+best ACC=0.43961, NMI=0.36304, V-Measure=0.36294, ARI=0.24616
+saving model to: ./results/rgbd/model_final.h52120
+print: ./results/rgbd/2130
+rc ACC=0.43892, NMI=0.36869, V-Measure=0.36855, ARI=0.25089
+print: ./results/rgbd/2140
+rc ACC=0.41408, NMI=0.36621, V-Measure=0.36619, ARI=0.22040
+print: ./results/rgbd/2150
+rc ACC=0.40718, NMI=0.35943, V-Measure=0.35939, ARI=0.21828
+print: ./results/rgbd/2160
+rc ACC=0.41753, NMI=0.37073, V-Measure=0.37063, ARI=0.23234
+print: ./results/rgbd/2170
+rc ACC=0.41339, NMI=0.36795, V-Measure=0.36788, ARI=0.21648
+print: ./results/rgbd/2180
+rc ACC=0.42581, NMI=0.37953, V-Measure=0.37945, ARI=0.23566
+print: ./results/rgbd/2190
+rc ACC=0.40925, NMI=0.35475, V-Measure=0.35456, ARI=0.22557
+print: ./results/rgbd/2200
+rc ACC=0.42167, NMI=0.36434, V-Measure=0.36427, ARI=0.23595
+rc ACC=0.42167, NMI=0.36434, V-Measure=0.36427, ARI=0.23595
+print: ./results/rgbd/2210
+rc ACC=0.41063, NMI=0.35364, V-Measure=0.35355, ARI=0.21794
+print: ./results/rgbd/2220
+rc ACC=0.42305, NMI=0.36828, V-Measure=0.36818, ARI=0.23772
+print: ./results/rgbd/2230
+rc ACC=0.41753, NMI=0.37212, V-Measure=0.37200, ARI=0.22467
+print: ./results/rgbd/2240
+rc ACC=0.40235, NMI=0.36783, V-Measure=0.36775, ARI=0.20439
+print: ./results/rgbd/2250
+rc ACC=0.41891, NMI=0.36997, V-Measure=0.36985, ARI=0.23270
+print: ./results/rgbd/2260
+rc ACC=0.43616, NMI=0.37018, V-Measure=0.36998, ARI=0.24921
+print: ./results/rgbd/2270
+rc ACC=0.43202, NMI=0.37807, V-Measure=0.37795, ARI=0.23996
+print: ./results/rgbd/2280
+rc ACC=0.42650, NMI=0.37299, V-Measure=0.37293, ARI=0.23765
+print: ./results/rgbd/2290
+rc ACC=0.43202, NMI=0.38200, V-Measure=0.36190, ARI=0.24221
+print: ./results/rgbd/2300
+rc ACC=0.42374, NMI=0.37321, V-Measure=0.37313, ARI=0.23264
+print: ./results/rgbd/2310
+rc ACC=0.42512, NMI=0.37062, V-Measure=0.37055, ARI=0.21777
+print: ./results/rgbd/2320
+rc ACC=0.43547, NMI=0.37629, V-Measure=0.37609, ARI=0.24493
+print: ./results/rgbd/2330
+rc ACC=0.43409, NMI=0.37202, V-Measure=0.37184, ARI=0.24332
+print: ./results/rgbd/2340
+rc ACC=0.43409, NMI=0.37929, V-Measure=0.37920, ARI=0.23762
+print: ./results/rgbd/2350
+rc ACC=0.43823, NMI=0.36773, V-Measure=0.36765, ARI=0.24607
+print: ./results/rgbd/2360
+rc ACC=0.43823, NMI=0.36361, V-Measure=0.36351, ARI=0.24692
+print: ./results/rgbd/2370
+rc ACC=0.43547, NMI=0.37327, V-Measure=0.37321, ARI=0.23402
+print: ./results/rgbd/2380
+rc ACC=0.42926, NMI=0.37587, V-Measure=0.37578, ARI=0.22967
+print: ./results/rgbd/2390
+rc ACC=0.43685, NMI=0.37707, V-Measure=0.37685, ARI=0.24965
+print: ./results/rgbd/2400
+rc ACC=0.43064, NMI=0.38211, V-Measure=0.37197, ARI=0.23654
+rc ACC=0.43064, NMI=0.38211, V-Measure=0.37197, ARI=0.23654
+print: ./results/rgbd/2410
+rc ACC=0.43478, NMI=0.37939, V-Measure=0.37929, ARI=0.24378
+print: ./results/rgbd/2420
+rc ACC=0.43271, NMI=0.36707, V-Measure=0.36687, ARI=0.24243
+print: ./results/rgbd/2430
+rc ACC=0.44237, NMI=0.38055, V-Measure=0.37042, ARI=0.24941
+best ACC=0.44237, NMI=0.38055, V-Measure=0.37042, ARI=0.24941
+saving model to: ./results/rgbd/model_final.h52430
+print: ./results/rgbd/2440
+rc ACC=0.43271, NMI=0.37364, V-Measure=0.37358, ARI=0.23238
+print: ./results/rgbd/2450
+rc ACC=0.42995, NMI=0.36676, V-Measure=0.36667, ARI=0.23464
+print: ./results/rgbd/2460
+rc ACC=0.43685, NMI=0.37188, V-Measure=0.37171, ARI=0.24786
+print: ./results/rgbd/2470
+rc ACC=0.43478, NMI=0.37681, V-Measure=0.37670, ARI=0.23300
+print: ./results/rgbd/2480
+rc ACC=0.44859, NMI=0.38145, V-Measure=0.38130, ARI=0.25500
+best ACC=0.44859, NMI=0.38145, V-Measure=0.38130, ARI=0.25500
+saving model to: ./results/rgbd/model_final.h52480
+print: ./results/rgbd/2490
+rc ACC=0.43202, NMI=0.36684, V-Measure=0.36664, ARI=0.24359
+print: ./results/rgbd/2500
+rc ACC=0.44790, NMI=0.37170, V-Measure=0.37156, ARI=0.25771
+print: ./results/rgbd/2510
+rc ACC=0.44651, NMI=0.37015, V-Measure=0.37006, ARI=0.24659
+print: ./results/rgbd/2520
+rc ACC=0.43961, NMI=0.37331, V-Measure=0.37316, ARI=0.24477
+print: ./results/rgbd/2530
+rc ACC=0.44997, NMI=0.38237, V-Measure=0.38222, ARI=0.25914
+best ACC=0.44997, NMI=0.38237, V-Measure=0.38222, ARI=0.25914
+saving model to: ./results/rgbd/model_final.h52530
+print: ./results/rgbd/2540
+rc ACC=0.44237, NMI=0.37727, V-Measure=0.37719, ARI=0.24108
+print: ./results/rgbd/2550
+rc ACC=0.44513, NMI=0.37520, V-Measure=0.37502, ARI=0.25240
+print: ./results/rgbd/2560
+rc ACC=0.44928, NMI=0.37835, V-Measure=0.37815, ARI=0.26025
+print: ./results/rgbd/2570
+rc ACC=0.45618, NMI=0.38952, V-Measure=0.37938, ARI=0.26283
+best ACC=0.45618, NMI=0.38952, V-Measure=0.37938, ARI=0.26283
+saving model to: ./results/rgbd/model_final.h52570
+print: ./results/rgbd/2580
+rc ACC=0.44859, NMI=0.37378, V-Measure=0.37368, ARI=0.25025
+print: ./results/rgbd/2590
+rc ACC=0.44237, NMI=0.37202, V-Measure=0.37188, ARI=0.25219
+print: ./results/rgbd/2600
+rc ACC=0.44997, NMI=0.38014, V-Measure=0.38002, ARI=0.25747
+rc ACC=0.44997, NMI=0.38014, V-Measure=0.38002, ARI=0.25747
+print: ./results/rgbd/2610
+rc ACC=0.45135, NMI=0.37403, V-Measure=0.37393, ARI=0.24825
+print: ./results/rgbd/2620
+rc ACC=0.44997, NMI=0.37690, V-Measure=0.37672, ARI=0.25602
+print: ./results/rgbd/2630
+rc ACC=0.45204, NMI=0.37660, V-Measure=0.37641, ARI=0.26100
+print: ./results/rgbd/2640
+rc ACC=0.45756, NMI=0.37666, V-Measure=0.37653, ARI=0.26450
+best ACC=0.45756, NMI=0.37666, V-Measure=0.37653, ARI=0.26450
+saving model to: ./results/rgbd/model_final.h52640
+print: ./results/rgbd/2650
+rc ACC=0.45687, NMI=0.37792, V-Measure=0.37776, ARI=0.26364
+print: ./results/rgbd/2660
+rc ACC=0.44997, NMI=0.36973, V-Measure=0.36958, ARI=0.25540
+print: ./results/rgbd/2670
+rc ACC=0.45618, NMI=0.37888, V-Measure=0.37879, ARI=0.25901
+print: ./results/rgbd/2680
+rc ACC=0.44790, NMI=0.36842, V-Measure=0.36834, ARI=0.24623
+print: ./results/rgbd/2690
+rc ACC=0.44928, NMI=0.37316, V-Measure=0.37301, ARI=0.25592
+print: ./results/rgbd/2700
+rc ACC=0.45066, NMI=0.36925, V-Measure=0.36915, ARI=0.25577
+print: ./results/rgbd/2710
+rc ACC=0.46101, NMI=0.39745, V-Measure=0.37732, ARI=0.26331
+best ACC=0.46101, NMI=0.39745, V-Measure=0.37732, ARI=0.26331
+saving model to: ./results/rgbd/model_final.h52710
+print: ./results/rgbd/2720
+rc ACC=0.44513, NMI=0.36786, V-Measure=0.36769, ARI=0.25238
+print: ./results/rgbd/2730
+rc ACC=0.45825, NMI=0.37421, V-Measure=0.37408, ARI=0.26891
+print: ./results/rgbd/2740
+rc ACC=0.45963, NMI=0.37420, V-Measure=0.37414, ARI=0.26728
+print: ./results/rgbd/2750
+rc ACC=0.45342, NMI=0.38579, V-Measure=0.37566, ARI=0.25805
+print: ./results/rgbd/2760
+rc ACC=0.45135, NMI=0.37475, V-Measure=0.37460, ARI=0.25844
+print: ./results/rgbd/2770
+rc ACC=0.45963, NMI=0.38625, V-Measure=0.37616, ARI=0.26737
+print: ./results/rgbd/2780
+rc ACC=0.45135, NMI=0.38291, V-Measure=0.37276, ARI=0.25904
+print: ./results/rgbd/2790
+rc ACC=0.45549, NMI=0.37707, V-Measure=0.37686, ARI=0.26650
+print: ./results/rgbd/2800
+rc ACC=0.46860, NMI=0.39533, V-Measure=0.37520, ARI=0.27356
+best ACC=0.46860, NMI=0.39533, V-Measure=0.37520, ARI=0.27356
+saving model to: ./results/rgbd/model_final.h52800
+rc ACC=0.46860, NMI=0.37533, V-Measure=0.37520, ARI=0.27356
+print: ./results/rgbd/2810
+rc ACC=0.45411, NMI=0.37326, V-Measure=0.37315, ARI=0.26243
+print: ./results/rgbd/2820
+rc ACC=0.45480, NMI=0.37113, V-Measure=0.37104, ARI=0.26311
+print: ./results/rgbd/2830
+rc ACC=0.45066, NMI=0.37203, V-Measure=0.37192, ARI=0.25723
+print: ./results/rgbd/2840
+rc ACC=0.46032, NMI=0.39017, V-Measure=0.37011, ARI=0.26340
+print: ./results/rgbd/2850
+rc ACC=0.45411, NMI=0.37136, V-Measure=0.37122, ARI=0.25902
+print: ./results/rgbd/2860
+rc ACC=0.45825, NMI=0.37729, V-Measure=0.37711, ARI=0.26595
+print: ./results/rgbd/2870
+rc ACC=0.46584, NMI=0.37842, V-Measure=0.37832, ARI=0.27528
+print: ./results/rgbd/2880
+rc ACC=0.46239, NMI=0.39402, V-Measure=0.37390, ARI=0.27003
+print: ./results/rgbd/2890
+rc ACC=0.45963, NMI=0.37295, V-Measure=0.37282, ARI=0.26818
+print: ./results/rgbd/2900
+rc ACC=0.45894, NMI=0.36791, V-Measure=0.36782, ARI=0.26605
+print: ./results/rgbd/2910
+rc ACC=0.45963, NMI=0.36780, V-Measure=0.36776, ARI=0.26200
+print: ./results/rgbd/2920
+rc ACC=0.44859, NMI=0.36445, V-Measure=0.36432, ARI=0.25101
+print: ./results/rgbd/2930
+rc ACC=0.46308, NMI=0.38207, V-Measure=0.37196, ARI=0.26968
+print: ./results/rgbd/2940
+rc ACC=0.46998, NMI=0.39982, V-Measure=0.37972, ARI=0.27685
+best ACC=0.46998, NMI=0.39982, V-Measure=0.37972, ARI=0.27685
+saving model to: ./results/rgbd/model_final.h52940
+print: ./results/rgbd/2950
+rc ACC=0.45618, NMI=0.36488, V-Measure=0.36474, ARI=0.26050
+print: ./results/rgbd/2960
+rc ACC=0.46377, NMI=0.37111, V-Measure=0.37101, ARI=0.27118
+print: ./results/rgbd/2970
+rc ACC=0.45687, NMI=0.37649, V-Measure=0.36643, ARI=0.26538
+print: ./results/rgbd/2980
+rc ACC=0.46653, NMI=0.37078, V-Measure=0.37070, ARI=0.27059
+print: ./results/rgbd/2990
+rc ACC=0.45549, NMI=0.36611, V-Measure=0.36602, ARI=0.26185
+print: ./results/rgbd/3000
+rc ACC=0.46170, NMI=0.38925, V-Measure=0.36918, ARI=0.26754
+rc ACC=0.46170, NMI=0.38925, V-Measure=0.36918, ARI=0.26754
+print: ./results/rgbd/3010
+rc ACC=0.46584, NMI=0.37250, V-Measure=0.37238, ARI=0.27187
+print: ./results/rgbd/3020
+rc ACC=0.45894, NMI=0.36782, V-Measure=0.36768, ARI=0.26357
+print: ./results/rgbd/3030
+rc ACC=0.47481, NMI=0.37226, V-Measure=0.37218, ARI=0.28399
+best ACC=0.47481, NMI=0.37226, V-Measure=0.37218, ARI=0.28399
+saving model to: ./results/rgbd/model_final.h53030
+print: ./results/rgbd/3040
+rc ACC=0.45894, NMI=0.36707, V-Measure=0.36700, ARI=0.26634
+print: ./results/rgbd/3050
+rc ACC=0.46722, NMI=0.36805, V-Measure=0.36796, ARI=0.27088
+print: ./results/rgbd/3060
+rc ACC=0.45549, NMI=0.36396, V-Measure=0.36388, ARI=0.26448
+print: ./results/rgbd/3070
+rc ACC=0.47067, NMI=0.37332, V-Measure=0.37328, ARI=0.27716
+print: ./results/rgbd/3080
+rc ACC=0.46170, NMI=0.36717, V-Measure=0.36706, ARI=0.26606
+print: ./results/rgbd/3090
+rc ACC=0.46653, NMI=0.37321, V-Measure=0.37308, ARI=0.27409
+print: ./results/rgbd/3100
+rc ACC=0.48033, NMI=0.40228, V-Measure=0.38222, ARI=0.29632
+best ACC=0.48033, NMI=0.40228, V-Measure=0.38222, ARI=0.29632
+saving model to: ./results/rgbd/model_final.h53100
+print: ./results/rgbd/3110
+rc ACC=0.46584, NMI=0.37210, V-Measure=0.37202, ARI=0.27616
+print: ./results/rgbd/3120
+rc ACC=0.46722, NMI=0.39164, V-Measure=0.37151, ARI=0.27275
+print: ./results/rgbd/3130
+rc ACC=0.46170, NMI=0.39757, V-Measure=0.36751, ARI=0.26991
+print: ./results/rgbd/3140
+rc ACC=0.47412, NMI=0.39858, V-Measure=0.36854, ARI=0.28068
+print: ./results/rgbd/3150
+rc ACC=0.45825, NMI=0.36261, V-Measure=0.36250, ARI=0.26218
+print: ./results/rgbd/3160
+rc ACC=0.46791, NMI=0.37652, V-Measure=0.37639, ARI=0.27616
+print: ./results/rgbd/3170
+rc ACC=0.47895, NMI=0.37799, V-Measure=0.37789, ARI=0.29085
+print: ./results/rgbd/3180
+rc ACC=0.45687, NMI=0.35993, V-Measure=0.35978, ARI=0.26279
+print: ./results/rgbd/3190
+rc ACC=0.46722, NMI=0.36833, V-Measure=0.36819, ARI=0.27496
+print: ./results/rgbd/3200
+rc ACC=0.45066, NMI=0.35307, V-Measure=0.35297, ARI=0.25847
+rc ACC=0.45066, NMI=0.35307, V-Measure=0.35297, ARI=0.25847
+print: ./results/rgbd/3210
+rc ACC=0.47550, NMI=0.36805, V-Measure=0.36802, ARI=0.28068
+print: ./results/rgbd/3220
+rc ACC=0.45342, NMI=0.35800, V-Measure=0.35789, ARI=0.25716
+print: ./results/rgbd/3230
+rc ACC=0.47412, NMI=0.37356, V-Measure=0.37342, ARI=0.27665
+print: ./results/rgbd/3240
+rc ACC=0.48033, NMI=0.40514, V-Measure=0.37503, ARI=0.29473
+print: ./results/rgbd/3250
+rc ACC=0.45894, NMI=0.36187, V-Measure=0.36170, ARI=0.26784
+print: ./results/rgbd/3260
+rc ACC=0.47205, NMI=0.36933, V-Measure=0.36915, ARI=0.28626
+print: ./results/rgbd/3270
+rc ACC=0.45963, NMI=0.36427, V-Measure=0.36416, ARI=0.26721
+print: ./results/rgbd/3280
+rc ACC=0.46515, NMI=0.36316, V-Measure=0.36311, ARI=0.27250
+print: ./results/rgbd/3290
+rc ACC=0.45618, NMI=0.36251, V-Measure=0.36237, ARI=0.26264
+print: ./results/rgbd/3300
+rc ACC=0.47136, NMI=0.38701, V-Measure=0.37688, ARI=0.28163
+print: ./results/rgbd/3310
+rc ACC=0.47550, NMI=0.38116, V-Measure=0.37104, ARI=0.28662
+print: ./results/rgbd/3320
+rc ACC=0.45618, NMI=0.36007, V-Measure=0.35989, ARI=0.26428
+print: ./results/rgbd/3330
+rc ACC=0.48516, NMI=0.40515, V-Measure=0.37503, ARI=0.30057
+best ACC=0.48516, NMI=0.40515, V-Measure=0.37503, ARI=0.30057
+saving model to: ./results/rgbd/model_final.h53330
+print: ./results/rgbd/3340
+rc ACC=0.46860, NMI=0.37772, V-Measure=0.36763, ARI=0.28028
+print: ./results/rgbd/3350
+rc ACC=0.47550, NMI=0.38724, V-Measure=0.36717, ARI=0.28537
+print: ./results/rgbd/3360
+rc ACC=0.46722, NMI=0.36438, V-Measure=0.36425, ARI=0.27576
+print: ./results/rgbd/3370
+rc ACC=0.48309, NMI=0.37390, V-Measure=0.37384, ARI=0.29469
+print: ./results/rgbd/3380
+rc ACC=0.47412, NMI=0.36658, V-Measure=0.36650, ARI=0.28674
+print: ./results/rgbd/3390
+rc ACC=0.45894, NMI=0.35430, V-Measure=0.35412, ARI=0.26306
+print: ./results/rgbd/3400
+rc ACC=0.49344, NMI=0.41712, V-Measure=0.37704, ARI=0.31979
+best ACC=0.49344, NMI=0.41712, V-Measure=0.37704, ARI=0.31979
+saving model to: ./results/rgbd/model_final.h53400
+rc ACC=0.49344, NMI=0.41712, V-Measure=0.37704, ARI=0.31979
+print: ./results/rgbd/3410
+rc ACC=0.45963, NMI=0.37531, V-Measure=0.35522, ARI=0.26742
+print: ./results/rgbd/3420
+rc ACC=0.47757, NMI=0.38593, V-Measure=0.36581, ARI=0.29154
+print: ./results/rgbd/3430
+rc ACC=0.46515, NMI=0.35641, V-Measure=0.35629, ARI=0.27404
+print: ./results/rgbd/3440
+rc ACC=0.48171, NMI=0.39649, V-Measure=0.37642, ARI=0.29199
+print: ./results/rgbd/3450
+rc ACC=0.47688, NMI=0.38636, V-Measure=0.36627, ARI=0.29062
+print: ./results/rgbd/3460
+rc ACC=0.46860, NMI=0.37222, V-Measure=0.36205, ARI=0.27732
+print: ./results/rgbd/3470
+rc ACC=0.48171, NMI=0.37092, V-Measure=0.37084, ARI=0.29721
+print: ./results/rgbd/3480
+rc ACC=0.46377, NMI=0.35890, V-Measure=0.35880, ARI=0.27354
+print: ./results/rgbd/3490
+rc ACC=0.47757, NMI=0.36699, V-Measure=0.36683, ARI=0.29361
+print: ./results/rgbd/3500
+rc ACC=0.47481, NMI=0.36406, V-Measure=0.36391, ARI=0.28704
+print: ./results/rgbd/3510
+rc ACC=0.48033, NMI=0.39947, V-Measure=0.36944, ARI=0.28490
+print: ./results/rgbd/3520
+rc ACC=0.46101, NMI=0.35925, V-Measure=0.35915, ARI=0.27625
+print: ./results/rgbd/3530
+rc ACC=0.47826, NMI=0.37498, V-Measure=0.36481, ARI=0.28932
+print: ./results/rgbd/3540
+rc ACC=0.48447, NMI=0.37630, V-Measure=0.37619, ARI=0.30148
+print: ./results/rgbd/3550
+rc ACC=0.46584, NMI=0.36323, V-Measure=0.36309, ARI=0.27851
+print: ./results/rgbd/3560
+rc ACC=0.48378, NMI=0.39840, V-Measure=0.36830, ARI=0.30194
+print: ./results/rgbd/3570
+rc ACC=0.47136, NMI=0.36073, V-Measure=0.36060, ARI=0.28893
+print: ./results/rgbd/3580
+rc ACC=0.48033, NMI=0.39686, V-Measure=0.36681, ARI=0.28847
+print: ./results/rgbd/3590
+rc ACC=0.47481, NMI=0.38790, V-Measure=0.36782, ARI=0.29132
+print: ./results/rgbd/3600
+rc ACC=0.48585, NMI=0.39835, V-Measure=0.36825, ARI=0.30053
+rc ACC=0.48585, NMI=0.39835, V-Measure=0.36825, ARI=0.30053
+print: ./results/rgbd/3610
+rc ACC=0.48585, NMI=0.39284, V-Measure=0.37276, ARI=0.30472
+print: ./results/rgbd/3620
+rc ACC=0.46446, NMI=0.35682, V-Measure=0.35670, ARI=0.27953
+print: ./results/rgbd/3630
+rc ACC=0.49551, NMI=0.41319, V-Measure=0.37313, ARI=0.33287
+best ACC=0.49551, NMI=0.41319, V-Measure=0.37313, ARI=0.33287
+saving model to: ./results/rgbd/model_final.h53630
+print: ./results/rgbd/3640
+rc ACC=0.47205, NMI=0.38072, V-Measure=0.36060, ARI=0.29009
+print: ./results/rgbd/3650
+rc ACC=0.48585, NMI=0.38703, V-Measure=0.36696, ARI=0.30314
+print: ./results/rgbd/3660
+rc ACC=0.47688, NMI=0.37930, V-Measure=0.35926, ARI=0.29556
+print: ./results/rgbd/3670
+rc ACC=0.48585, NMI=0.38935, V-Measure=0.36927, ARI=0.30034
+print: ./results/rgbd/3680
+rc ACC=0.48999, NMI=0.37518, V-Measure=0.37511, ARI=0.30960
+print: ./results/rgbd/3690
+rc ACC=0.47205, NMI=0.36310, V-Measure=0.36302, ARI=0.28542
+print: ./results/rgbd/3700
+rc ACC=0.49413, NMI=0.38033, V-Measure=0.37030, ARI=0.31408
+print: ./results/rgbd/3710
+rc ACC=0.47688, NMI=0.36442, V-Measure=0.36430, ARI=0.29640
+print: ./results/rgbd/3720
+rc ACC=0.48240, NMI=0.38152, V-Measure=0.36145, ARI=0.30240
+print: ./results/rgbd/3730
+rc ACC=0.48102, NMI=0.36147, V-Measure=0.36142, ARI=0.29722
+print: ./results/rgbd/3740
+rc ACC=0.48240, NMI=0.36431, V-Measure=0.36428, ARI=0.29846
+print: ./results/rgbd/3750
+rc ACC=0.47895, NMI=0.36080, V-Measure=0.36074, ARI=0.29901
+print: ./results/rgbd/3760
+rc ACC=0.48516, NMI=0.37068, V-Measure=0.37061, ARI=0.30348
+print: ./results/rgbd/3770
+rc ACC=0.49551, NMI=0.41130, V-Measure=0.37125, ARI=0.31618
+print: ./results/rgbd/3780
+rc ACC=0.48378, NMI=0.39845, V-Measure=0.36536, ARI=0.30126
+print: ./results/rgbd/3790
+rc ACC=0.48861, NMI=0.36587, V-Measure=0.36582, ARI=0.31265
+print: ./results/rgbd/3800
+rc ACC=0.49275, NMI=0.37237, V-Measure=0.37234, ARI=0.31275
+rc ACC=0.49275, NMI=0.37237, V-Measure=0.37234, ARI=0.31275
+print: ./results/rgbd/3810
+rc ACC=0.48309, NMI=0.36164, V-Measure=0.36158, ARI=0.29877
+print: ./results/rgbd/3820
+rc ACC=0.48171, NMI=0.36479, V-Measure=0.36475, ARI=0.30175
+print: ./results/rgbd/3830
+rc ACC=0.49206, NMI=0.36633, V-Measure=0.36631, ARI=0.30881
+print: ./results/rgbd/3840
+rc ACC=0.48654, NMI=0.36572, V-Measure=0.36565, ARI=0.30866
+print: ./results/rgbd/3850
+rc ACC=0.46653, NMI=0.35739, V-Measure=0.35728, ARI=0.28489
+print: ./results/rgbd/3860
+rc ACC=0.49206, NMI=0.36511, V-Measure=0.36506, ARI=0.31455
+print: ./results/rgbd/3870
+rc ACC=0.48171, NMI=0.35874, V-Measure=0.35868, ARI=0.30089
+print: ./results/rgbd/3880
+rc ACC=0.48447, NMI=0.36037, V-Measure=0.36032, ARI=0.30404
+print: ./results/rgbd/3890
+rc ACC=0.47688, NMI=0.36017, V-Measure=0.36013, ARI=0.30030
+print: ./results/rgbd/3900
+rc ACC=0.48654, NMI=0.36318, V-Measure=0.36316, ARI=0.30106
+print: ./results/rgbd/3910
+rc ACC=0.48861, NMI=0.36556, V-Measure=0.36551, ARI=0.31130
+print: ./results/rgbd/3920
+rc ACC=0.47688, NMI=0.36114, V-Measure=0.36106, ARI=0.29700
+print: ./results/rgbd/3930
+rc ACC=0.49137, NMI=0.36569, V-Measure=0.36568, ARI=0.31789
+print: ./results/rgbd/3940
+rc ACC=0.48240, NMI=0.36085, V-Measure=0.36079, ARI=0.30057
+print: ./results/rgbd/3950
+rc ACC=0.48378, NMI=0.36150, V-Measure=0.36145, ARI=0.31126
+print: ./results/rgbd/3960
+rc ACC=0.48654, NMI=0.35985, V-Measure=0.35983, ARI=0.30380
+print: ./results/rgbd/3970
+rc ACC=0.48516, NMI=0.35630, V-Measure=0.35628, ARI=0.29804
+print: ./results/rgbd/3980
+rc ACC=0.48102, NMI=0.36159, V-Measure=0.36154, ARI=0.30309
+print: ./results/rgbd/3990
+rc ACC=0.48516, NMI=0.36376, V-Measure=0.36371, ARI=0.30498
+
+
+ACC=0.39268, NMI=0.38966, V-Measure=0.38874, ARI=0.23756
+rc ACC=0.49137, NMI=0.36266, V-Measure=0.36263, ARI=0.31687
+saving model to: ./results/rgbd/model_final.h54000
+aligned ratio: 6.69%. 1449
+V1-Iter 4000: acc=0.48378, nmi=0.39268, v-measure=0.39266, ari=0.29247; loss=0.00617
+V2-Iter 4000: acc=0.19255, nmi=0.05230, v-measure=0.05230, ari=0.02616; loss=0.00568
+Multi-view discriminative representation learning
+Multi-view discriminative representation learning
+unify target distribution of KL loss
+print: ./results/rgbd/4000
+rc ACC=0.49137, NMI=0.36266, V-Measure=0.36263, ARI=0.31687
+rc ACC=0.49137, NMI=0.36266, V-Measure=0.36263, ARI=0.31687
+print: ./results/rgbd/4010
+rc ACC=0.47481, NMI=0.35376, V-Measure=0.35367, ARI=0.29366
+print: ./results/rgbd/4020
+rc ACC=0.49068, NMI=0.36524, V-Measure=0.36521, ARI=0.31455
+print: ./results/rgbd/4030
+rc ACC=0.48447, NMI=0.35588, V-Measure=0.35586, ARI=0.30357
+print: ./results/rgbd/4040
+rc ACC=0.48585, NMI=0.35991, V-Measure=0.35989, ARI=0.30511
+print: ./results/rgbd/4050
+rc ACC=0.48309, NMI=0.36206, V-Measure=0.36202, ARI=0.30840
+print: ./results/rgbd/4060
+rc ACC=0.49206, NMI=0.36396, V-Measure=0.36393, ARI=0.31075
+print: ./results/rgbd/4070
+rc ACC=0.49206, NMI=0.36510, V-Measure=0.36508, ARI=0.31761
+print: ./results/rgbd/4080
+rc ACC=0.48378, NMI=0.36623, V-Measure=0.36615, ARI=0.30470
+print: ./results/rgbd/4090
+rc ACC=0.49068, NMI=0.36134, V-Measure=0.36133, ARI=0.31795
+print: ./results/rgbd/4100
+rc ACC=0.49206, NMI=0.36308, V-Measure=0.36307, ARI=0.31630
+print: ./results/rgbd/4110
+rc ACC=0.48654, NMI=0.35731, V-Measure=0.35728, ARI=0.30678
+print: ./results/rgbd/4120
+rc ACC=0.48309, NMI=0.36236, V-Measure=0.36233, ARI=0.30660
+print: ./results/rgbd/4130
+rc ACC=0.49758, NMI=0.36273, V-Measure=0.36272, ARI=0.31504
+best ACC=0.49758, NMI=0.36273, V-Measure=0.36272, ARI=0.31504
+saving model to: ./results/rgbd/model_final.h54130
+print: ./results/rgbd/4140
+rc ACC=0.48930, NMI=0.35900, V-Measure=0.35898, ARI=0.31395
+print: ./results/rgbd/4150
+rc ACC=0.48447, NMI=0.36512, V-Measure=0.36505, ARI=0.30507
+print: ./results/rgbd/4160
+rc ACC=0.49482, NMI=0.36483, V-Measure=0.36482, ARI=0.32057
+print: ./results/rgbd/4170
+rc ACC=0.48516, NMI=0.35448, V-Measure=0.35446, ARI=0.31181
+print: ./results/rgbd/4180
+rc ACC=0.48654, NMI=0.35981, V-Measure=0.35978, ARI=0.30672
+print: ./results/rgbd/4190
+rc ACC=0.48033, NMI=0.35546, V-Measure=0.35544, ARI=0.30398
+print: ./results/rgbd/4200
+rc ACC=0.48792, NMI=0.35684, V-Measure=0.35682, ARI=0.29490
+rc ACC=0.48792, NMI=0.35684, V-Measure=0.35682, ARI=0.29490
+print: ./results/rgbd/4210
+rc ACC=0.48447, NMI=0.36347, V-Measure=0.36342, ARI=0.30831
+print: ./results/rgbd/4220
+rc ACC=0.49275, NMI=0.36826, V-Measure=0.36822, ARI=0.31419
+print: ./results/rgbd/4230
+rc ACC=0.49896, NMI=0.36785, V-Measure=0.36784, ARI=0.32725
+best ACC=0.49896, NMI=0.36785, V-Measure=0.36784, ARI=0.32725
+saving model to: ./results/rgbd/model_final.h54230
+print: ./results/rgbd/4240
+rc ACC=0.48309, NMI=0.35935, V-Measure=0.35929, ARI=0.30778
+print: ./results/rgbd/4250
+rc ACC=0.48585, NMI=0.35786, V-Measure=0.35782, ARI=0.30920
+print: ./results/rgbd/4260
+rc ACC=0.48240, NMI=0.35606, V-Measure=0.35603, ARI=0.30685
+print: ./results/rgbd/4270
+rc ACC=0.48378, NMI=0.35452, V-Measure=0.35450, ARI=0.29887
+print: ./results/rgbd/4280
+rc ACC=0.47274, NMI=0.35349, V-Measure=0.35341, ARI=0.30022
+print: ./results/rgbd/4290
+rc ACC=0.48930, NMI=0.36537, V-Measure=0.36535, ARI=0.31192
+print: ./results/rgbd/4300
+rc ACC=0.49551, NMI=0.36538, V-Measure=0.36536, ARI=0.32414
+print: ./results/rgbd/4310
+rc ACC=0.47343, NMI=0.35543, V-Measure=0.35533, ARI=0.30037
+print: ./results/rgbd/4320
+rc ACC=0.49275, NMI=0.36107, V-Measure=0.36107, ARI=0.32294
+print: ./results/rgbd/4330
+rc ACC=0.48378, NMI=0.35439, V-Measure=0.35439, ARI=0.31470
+print: ./results/rgbd/4340
+rc ACC=0.47481, NMI=0.34878, V-Measure=0.34874, ARI=0.29159
+print: ./results/rgbd/4350
+rc ACC=0.47136, NMI=0.35145, V-Measure=0.35136, ARI=0.29677
+print: ./results/rgbd/4360
+rc ACC=0.49068, NMI=0.36152, V-Measure=0.36149, ARI=0.31380
+print: ./results/rgbd/4370
+rc ACC=0.49206, NMI=0.36229, V-Measure=0.36227, ARI=0.32203
+print: ./results/rgbd/4380
+rc ACC=0.47136, NMI=0.35121, V-Measure=0.35109, ARI=0.29282
+print: ./results/rgbd/4390
+rc ACC=0.49551, NMI=0.36256, V-Measure=0.36254, ARI=0.32528
+print: ./results/rgbd/4400
+rc ACC=0.48033, NMI=0.35166, V-Measure=0.35164, ARI=0.30997
+rc ACC=0.48033, NMI=0.35166, V-Measure=0.35164, ARI=0.30997
+print: ./results/rgbd/4410
+rc ACC=0.47343, NMI=0.35076, V-Measure=0.35073, ARI=0.29543
+print: ./results/rgbd/4420
+rc ACC=0.47826, NMI=0.35831, V-Measure=0.35826, ARI=0.31181
+print: ./results/rgbd/4430
+rc ACC=0.48033, NMI=0.35410, V-Measure=0.35407, ARI=0.29761
+print: ./results/rgbd/4440
+rc ACC=0.48999, NMI=0.36666, V-Measure=0.36664, ARI=0.32170
+print: ./results/rgbd/4450
+rc ACC=0.47343, NMI=0.35206, V-Measure=0.35196, ARI=0.29530
+print: ./results/rgbd/4460
+rc ACC=0.48723, NMI=0.35715, V-Measure=0.35714, ARI=0.31140
+print: ./results/rgbd/4470
+rc ACC=0.47757, NMI=0.35370, V-Measure=0.35368, ARI=0.31071
+print: ./results/rgbd/4480
+rc ACC=0.48240, NMI=0.35711, V-Measure=0.35710, ARI=0.30996
+print: ./results/rgbd/4490
+rc ACC=0.48171, NMI=0.35911, V-Measure=0.35910, ARI=0.31623
+print: ./results/rgbd/4500
+rc ACC=0.48171, NMI=0.35797, V-Measure=0.35795, ARI=0.30283
+print: ./results/rgbd/4510
+rc ACC=0.48585, NMI=0.36154, V-Measure=0.36153, ARI=0.31697
+print: ./results/rgbd/4520
+rc ACC=0.48102, NMI=0.36048, V-Measure=0.36043, ARI=0.31177
+print: ./results/rgbd/4530
+rc ACC=0.49482, NMI=0.36664, V-Measure=0.36663, ARI=0.32205
+print: ./results/rgbd/4540
+rc ACC=0.47757, NMI=0.35902, V-Measure=0.35898, ARI=0.31251
+print: ./results/rgbd/4550
+rc ACC=0.48585, NMI=0.35368, V-Measure=0.35368, ARI=0.31237
+print: ./results/rgbd/4560
+rc ACC=0.47550, NMI=0.35283, V-Measure=0.35282, ARI=0.31379
+print: ./results/rgbd/4570
+rc ACC=0.47757, NMI=0.35299, V-Measure=0.35299, ARI=0.30001
+print: ./results/rgbd/4580
+rc ACC=0.48654, NMI=0.35917, V-Measure=0.35917, ARI=0.31640
+print: ./results/rgbd/4590
+rc ACC=0.48309, NMI=0.35870, V-Measure=0.35868, ARI=0.30508
+print: ./results/rgbd/4600
+rc ACC=0.48309, NMI=0.35910, V-Measure=0.35908, ARI=0.31293
+rc ACC=0.48309, NMI=0.35910, V-Measure=0.35908, ARI=0.31293
+print: ./results/rgbd/4610
+rc ACC=0.47757, NMI=0.36035, V-Measure=0.36030, ARI=0.30796
+print: ./results/rgbd/4620
+rc ACC=0.49137, NMI=0.35705, V-Measure=0.35705, ARI=0.31378
+print: ./results/rgbd/4630
+rc ACC=0.48033, NMI=0.35371, V-Measure=0.35370, ARI=0.31951
+print: ./results/rgbd/4640
+rc ACC=0.47964, NMI=0.34976, V-Measure=0.34976, ARI=0.30518
+print: ./results/rgbd/4650
+rc ACC=0.47895, NMI=0.35715, V-Measure=0.35714, ARI=0.32130
+print: ./results/rgbd/4660
+rc ACC=0.48585, NMI=0.35868, V-Measure=0.35867, ARI=0.31000
+print: ./results/rgbd/4670
+rc ACC=0.47964, NMI=0.36007, V-Measure=0.36005, ARI=0.31164
+print: ./results/rgbd/4680
+rc ACC=0.46722, NMI=0.34812, V-Measure=0.34806, ARI=0.29421
+print: ./results/rgbd/4690
+rc ACC=0.48516, NMI=0.35494, V-Measure=0.35494, ARI=0.30659
+print: ./results/rgbd/4700
+rc ACC=0.47550, NMI=0.35343, V-Measure=0.35342, ARI=0.31435
+print: ./results/rgbd/4710
+rc ACC=0.47895, NMI=0.35384, V-Measure=0.35384, ARI=0.30888
+print: ./results/rgbd/4720
+rc ACC=0.47964, NMI=0.35118, V-Measure=0.35117, ARI=0.31666
+print: ./results/rgbd/4730
+rc ACC=0.48240, NMI=0.35306, V-Measure=0.35306, ARI=0.30709
+print: ./results/rgbd/4740
+rc ACC=0.46929, NMI=0.35101, V-Measure=0.35098, ARI=0.30314
+print: ./results/rgbd/4750
+rc ACC=0.47895, NMI=0.35817, V-Measure=0.35814, ARI=0.30485
+print: ./results/rgbd/4760
+rc ACC=0.49275, NMI=0.36096, V-Measure=0.36096, ARI=0.31730
+print: ./results/rgbd/4770
+rc ACC=0.47619, NMI=0.35787, V-Measure=0.35783, ARI=0.31055
+print: ./results/rgbd/4780
+rc ACC=0.48033, NMI=0.35223, V-Measure=0.35223, ARI=0.30685
+print: ./results/rgbd/4790
+rc ACC=0.48171, NMI=0.35137, V-Measure=0.35137, ARI=0.32048
+print: ./results/rgbd/4800
+rc ACC=0.48240, NMI=0.35176, V-Measure=0.35176, ARI=0.30589
+rc ACC=0.48240, NMI=0.35176, V-Measure=0.35176, ARI=0.30589
+print: ./results/rgbd/4810
+rc ACC=0.46998, NMI=0.34960, V-Measure=0.34959, ARI=0.30152
+print: ./results/rgbd/4820
+rc ACC=0.47550, NMI=0.35486, V-Measure=0.35483, ARI=0.30776
+print: ./results/rgbd/4830
+rc ACC=0.48309, NMI=0.35895, V-Measure=0.35893, ARI=0.30840
+print: ./results/rgbd/4840
+rc ACC=0.47343, NMI=0.35675, V-Measure=0.35670, ARI=0.30460
+print: ./results/rgbd/4850
+rc ACC=0.47619, NMI=0.35323, V-Measure=0.35323, ARI=0.30359
+print: ./results/rgbd/4860
+rc ACC=0.48171, NMI=0.35156, V-Measure=0.35156, ARI=0.31671
+print: ./results/rgbd/4870
+rc ACC=0.48171, NMI=0.35226, V-Measure=0.35225, ARI=0.31110
+print: ./results/rgbd/4880
+rc ACC=0.46584, NMI=0.34513, V-Measure=0.34512, ARI=0.29977
+print: ./results/rgbd/4890
+rc ACC=0.47343, NMI=0.35260, V-Measure=0.35257, ARI=0.30083
+print: ./results/rgbd/4900
+rc ACC=0.48309, NMI=0.35858, V-Measure=0.35854, ARI=0.30876
+print: ./results/rgbd/4910
+rc ACC=0.46929, NMI=0.35176, V-Measure=0.35172, ARI=0.29818
+print: ./results/rgbd/4920
+rc ACC=0.47481, NMI=0.34842, V-Measure=0.34841, ARI=0.29765
+print: ./results/rgbd/4930
+rc ACC=0.48033, NMI=0.35035, V-Measure=0.35035, ARI=0.31411
+print: ./results/rgbd/4940
+rc ACC=0.48309, NMI=0.35593, V-Measure=0.35591, ARI=0.31242
+print: ./results/rgbd/4950
+rc ACC=0.46101, NMI=0.33443, V-Measure=0.33442, ARI=0.28662
+print: ./results/rgbd/4960
+rc ACC=0.47550, NMI=0.35136, V-Measure=0.35136, ARI=0.30552
+print: ./results/rgbd/4970
+rc ACC=0.46860, NMI=0.34961, V-Measure=0.34955, ARI=0.29661
+print: ./results/rgbd/4980
+rc ACC=0.47343, NMI=0.35635, V-Measure=0.35630, ARI=0.30020
+print: ./results/rgbd/4990
+rc ACC=0.48240, NMI=0.35832, V-Measure=0.35830, ARI=0.30901
+print: ./results/rgbd/5000
+rc ACC=0.47688, NMI=0.35438, V-Measure=0.35438, ARI=0.30635
+rc ACC=0.47688, NMI=0.35438, V-Measure=0.35438, ARI=0.30635
+print: ./results/rgbd/5010
+rc ACC=0.48102, NMI=0.35027, V-Measure=0.35026, ARI=0.30870
+print: ./results/rgbd/5020
+rc ACC=0.47136, NMI=0.34305, V-Measure=0.34305, ARI=0.30023
+print: ./results/rgbd/5030
+rc ACC=0.47757, NMI=0.34716, V-Measure=0.34715, ARI=0.30420
+print: ./results/rgbd/5040
+rc ACC=0.48033, NMI=0.35464, V-Measure=0.35462, ARI=0.30541
+print: ./results/rgbd/5050
+rc ACC=0.46653, NMI=0.34959, V-Measure=0.34954, ARI=0.29279
+print: ./results/rgbd/5060
+rc ACC=0.48654, NMI=0.35827, V-Measure=0.35826, ARI=0.31417
+print: ./results/rgbd/5070
+rc ACC=0.47550, NMI=0.34964, V-Measure=0.34964, ARI=0.30402
+print: ./results/rgbd/5080
+rc ACC=0.48240, NMI=0.35112, V-Measure=0.35111, ARI=0.31168
+print: ./results/rgbd/5090
+rc ACC=0.46101, NMI=0.33805, V-Measure=0.33805, ARI=0.29581
+print: ./results/rgbd/5100
+rc ACC=0.48447, NMI=0.35681, V-Measure=0.35675, ARI=0.31391
+print: ./results/rgbd/5110
+rc ACC=0.46584, NMI=0.34234, V-Measure=0.34234, ARI=0.29562
+print: ./results/rgbd/5120
+rc ACC=0.46860, NMI=0.35120, V-Measure=0.35116, ARI=0.29564
+print: ./results/rgbd/5130
+rc ACC=0.48240, NMI=0.35909, V-Measure=0.35906, ARI=0.30869
+print: ./results/rgbd/5140
+rc ACC=0.47826, NMI=0.35867, V-Measure=0.35866, ARI=0.31025
+print: ./results/rgbd/5150
+rc ACC=0.47136, NMI=0.34712, V-Measure=0.34712, ARI=0.29928
+print: ./results/rgbd/5160
+rc ACC=0.46791, NMI=0.34253, V-Measure=0.34252, ARI=0.30455
+print: ./results/rgbd/5170
+rc ACC=0.48102, NMI=0.35652, V-Measure=0.35639, ARI=0.31428
+print: ./results/rgbd/5180
+rc ACC=0.46515, NMI=0.34287, V-Measure=0.34287, ARI=0.29074
+print: ./results/rgbd/5190
+rc ACC=0.47412, NMI=0.35208, V-Measure=0.35205, ARI=0.29910
+print: ./results/rgbd/5200
+rc ACC=0.48447, NMI=0.35864, V-Measure=0.35863, ARI=0.31285
+rc ACC=0.48447, NMI=0.35864, V-Measure=0.35863, ARI=0.31285
+print: ./results/rgbd/5210
+rc ACC=0.47205, NMI=0.35373, V-Measure=0.35371, ARI=0.30079
+print: ./results/rgbd/5220
+rc ACC=0.48585, NMI=0.35603, V-Measure=0.35603, ARI=0.31756
+print: ./results/rgbd/5230
+rc ACC=0.47274, NMI=0.34154, V-Measure=0.34154, ARI=0.30156
+print: ./results/rgbd/5240
+rc ACC=0.47964, NMI=0.34845, V-Measure=0.34834, ARI=0.31104
+print: ./results/rgbd/5250
+rc ACC=0.46239, NMI=0.33990, V-Measure=0.33989, ARI=0.28792
+print: ./results/rgbd/5260
+rc ACC=0.47274, NMI=0.34518, V-Measure=0.34517, ARI=0.30371
+print: ./results/rgbd/5270
+rc ACC=0.48309, NMI=0.35908, V-Measure=0.35903, ARI=0.30474
+print: ./results/rgbd/5280
+rc ACC=0.46791, NMI=0.35252, V-Measure=0.35249, ARI=0.29618
+print: ./results/rgbd/5290
+rc ACC=0.47757, NMI=0.34536, V-Measure=0.34536, ARI=0.30507
+print: ./results/rgbd/5300
+rc ACC=0.47481, NMI=0.34182, V-Measure=0.34182, ARI=0.30181
+print: ./results/rgbd/5310
+rc ACC=0.47826, NMI=0.34552, V-Measure=0.34546, ARI=0.31556
+print: ./results/rgbd/5320
+rc ACC=0.45894, NMI=0.33820, V-Measure=0.33819, ARI=0.28919
+print: ./results/rgbd/5330
+rc ACC=0.46515, NMI=0.33811, V-Measure=0.33811, ARI=0.29401
+print: ./results/rgbd/5340
+rc ACC=0.47757, NMI=0.35399, V-Measure=0.35396, ARI=0.30472
+print: ./results/rgbd/5350
+rc ACC=0.47550, NMI=0.35445, V-Measure=0.35442, ARI=0.30270
+print: ./results/rgbd/5360
+rc ACC=0.48447, NMI=0.35124, V-Measure=0.35123, ARI=0.31553
+print: ./results/rgbd/5370
+rc ACC=0.47481, NMI=0.34672, V-Measure=0.34672, ARI=0.30336
+print: ./results/rgbd/5380
+rc ACC=0.47343, NMI=0.34410, V-Measure=0.34408, ARI=0.30728
+print: ./results/rgbd/5390
+rc ACC=0.45273, NMI=0.33228, V-Measure=0.33225, ARI=0.28581
+print: ./results/rgbd/5400
+rc ACC=0.46377, NMI=0.33836, V-Measure=0.33834, ARI=0.29763
+rc ACC=0.46377, NMI=0.33836, V-Measure=0.33834, ARI=0.29763
+print: ./results/rgbd/5410
+rc ACC=0.47136, NMI=0.34898, V-Measure=0.34897, ARI=0.30126
+print: ./results/rgbd/5420
+rc ACC=0.47619, NMI=0.34891, V-Measure=0.34889, ARI=0.30002
+print: ./results/rgbd/5430
+rc ACC=0.47550, NMI=0.34886, V-Measure=0.34886, ARI=0.30800
+print: ./results/rgbd/5440
+rc ACC=0.46929, NMI=0.34536, V-Measure=0.34536, ARI=0.29733
+print: ./results/rgbd/5450
+rc ACC=0.47688, NMI=0.34435, V-Measure=0.34434, ARI=0.30807
+print: ./results/rgbd/5460
+rc ACC=0.46860, NMI=0.33967, V-Measure=0.33961, ARI=0.30244
+print: ./results/rgbd/5470
+rc ACC=0.47481, NMI=0.34221, V-Measure=0.34218, ARI=0.30998
+print: ./results/rgbd/5480
+rc ACC=0.46446, NMI=0.34028, V-Measure=0.34028, ARI=0.29193
+print: ./results/rgbd/5490
+rc ACC=0.47274, NMI=0.34424, V-Measure=0.34424, ARI=0.30463
+print: ./results/rgbd/5500
+rc ACC=0.47205, NMI=0.34727, V-Measure=0.34727, ARI=0.30741
+print: ./results/rgbd/5510
+rc ACC=0.47067, NMI=0.34287, V-Measure=0.34287, ARI=0.30027
+print: ./results/rgbd/5520
+rc ACC=0.47619, NMI=0.34335, V-Measure=0.34332, ARI=0.30695
+print: ./results/rgbd/5530
+rc ACC=0.46446, NMI=0.33662, V-Measure=0.33657, ARI=0.30899
+print: ./results/rgbd/5540
+rc ACC=0.47412, NMI=0.34115, V-Measure=0.34108, ARI=0.31306
+print: ./results/rgbd/5550
+rc ACC=0.46032, NMI=0.33189, V-Measure=0.33188, ARI=0.29266
+print: ./results/rgbd/5560
+rc ACC=0.47619, NMI=0.34484, V-Measure=0.34484, ARI=0.31124
+print: ./results/rgbd/5570
+rc ACC=0.47205, NMI=0.34320, V-Measure=0.34320, ARI=0.30540
+print: ./results/rgbd/5580
+rc ACC=0.47481, NMI=0.34749, V-Measure=0.34749, ARI=0.30398
+print: ./results/rgbd/5590
+rc ACC=0.47619, NMI=0.34821, V-Measure=0.34819, ARI=0.31266
+print: ./results/rgbd/5600
+rc ACC=0.46929, NMI=0.34135, V-Measure=0.34130, ARI=0.30906
+rc ACC=0.46929, NMI=0.34135, V-Measure=0.34130, ARI=0.30906
+print: ./results/rgbd/5610
+rc ACC=0.48171, NMI=0.35123, V-Measure=0.35110, ARI=0.32095
+print: ./results/rgbd/5620
+rc ACC=0.45756, NMI=0.33075, V-Measure=0.33072, ARI=0.29119
+print: ./results/rgbd/5630
+rc ACC=0.47412, NMI=0.34447, V-Measure=0.34441, ARI=0.31523
+print: ./results/rgbd/5640
+rc ACC=0.46446, NMI=0.34168, V-Measure=0.34166, ARI=0.29881
+print: ./results/rgbd/5650
+rc ACC=0.47136, NMI=0.33808, V-Measure=0.33807, ARI=0.29742
+print: ./results/rgbd/5660
+rc ACC=0.48102, NMI=0.34996, V-Measure=0.34995, ARI=0.31765
+print: ./results/rgbd/5670
+rc ACC=0.47619, NMI=0.34599, V-Measure=0.34594, ARI=0.31507
+print: ./results/rgbd/5680
+rc ACC=0.48102, NMI=0.34440, V-Measure=0.34428, ARI=0.31753
+print: ./results/rgbd/5690
+rc ACC=0.46239, NMI=0.33627, V-Measure=0.33621, ARI=0.29777
+print: ./results/rgbd/5700
+rc ACC=0.47550, NMI=0.34207, V-Measure=0.34194, ARI=0.31283
+print: ./results/rgbd/5710
+rc ACC=0.46308, NMI=0.33520, V-Measure=0.33517, ARI=0.30014
+print: ./results/rgbd/5720
+rc ACC=0.47136, NMI=0.33712, V-Measure=0.33710, ARI=0.29772
+print: ./results/rgbd/5730
+rc ACC=0.47550, NMI=0.34400, V-Measure=0.34397, ARI=0.31542
+print: ./results/rgbd/5740
+rc ACC=0.46860, NMI=0.33984, V-Measure=0.33981, ARI=0.30143
+print: ./results/rgbd/5750
+rc ACC=0.47757, NMI=0.34448, V-Measure=0.34440, ARI=0.31448
+print: ./results/rgbd/5760
+rc ACC=0.46446, NMI=0.33716, V-Measure=0.33710, ARI=0.29857
+print: ./results/rgbd/5770
+rc ACC=0.47550, NMI=0.34229, V-Measure=0.34211, ARI=0.31194
+print: ./results/rgbd/5780
+rc ACC=0.47205, NMI=0.34185, V-Measure=0.34174, ARI=0.31191
+print: ./results/rgbd/5790
+rc ACC=0.46653, NMI=0.32811, V-Measure=0.32809, ARI=0.29286
+print: ./results/rgbd/5800
+rc ACC=0.46929, NMI=0.33746, V-Measure=0.33742, ARI=0.30848
+rc ACC=0.46929, NMI=0.33746, V-Measure=0.33742, ARI=0.30848
+print: ./results/rgbd/5810
+rc ACC=0.47136, NMI=0.33770, V-Measure=0.33766, ARI=0.30595
+print: ./results/rgbd/5820
+rc ACC=0.47619, NMI=0.34316, V-Measure=0.34312, ARI=0.31212
+print: ./results/rgbd/5830
+rc ACC=0.46170, NMI=0.33341, V-Measure=0.33335, ARI=0.29637
+print: ./results/rgbd/5840
+rc ACC=0.47343, NMI=0.34110, V-Measure=0.34091, ARI=0.30805
+print: ./results/rgbd/5850
+rc ACC=0.46860, NMI=0.34406, V-Measure=0.34397, ARI=0.30663
+print: ./results/rgbd/5860
+rc ACC=0.46998, NMI=0.33505, V-Measure=0.33500, ARI=0.30154
+print: ./results/rgbd/5870
+rc ACC=0.48033, NMI=0.34860, V-Measure=0.34845, ARI=0.31686
+print: ./results/rgbd/5880
+rc ACC=0.46791, NMI=0.33698, V-Measure=0.33696, ARI=0.30042
+print: ./results/rgbd/5890
+rc ACC=0.47550, NMI=0.33649, V-Measure=0.33646, ARI=0.30479
+print: ./results/rgbd/5900
+rc ACC=0.46722, NMI=0.33549, V-Measure=0.33544, ARI=0.30161
+print: ./results/rgbd/5910
+rc ACC=0.47205, NMI=0.34030, V-Measure=0.34015, ARI=0.31356
+print: ./results/rgbd/5920
+rc ACC=0.46515, NMI=0.33618, V-Measure=0.33606, ARI=0.30646
+print: ./results/rgbd/5930
+rc ACC=0.47136, NMI=0.33914, V-Measure=0.33903, ARI=0.30686
+print: ./results/rgbd/5940
+rc ACC=0.45411, NMI=0.32806, V-Measure=0.32793, ARI=0.30256
+print: ./results/rgbd/5950
+rc ACC=0.46929, NMI=0.33812, V-Measure=0.33808, ARI=0.29938
+print: ./results/rgbd/5960
+rc ACC=0.47343, NMI=0.33731, V-Measure=0.33729, ARI=0.30494
+print: ./results/rgbd/5970
+rc ACC=0.46170, NMI=0.33511, V-Measure=0.33507, ARI=0.29754
+print: ./results/rgbd/5980
+rc ACC=0.47550, NMI=0.34172, V-Measure=0.34161, ARI=0.31349
+print: ./results/rgbd/5990
+rc ACC=0.47619, NMI=0.34070, V-Measure=0.34062, ARI=0.31181
+
+
+ACC=0.41891, NMI=0.39675, V-Measure=0.39585, ARI=0.25538
+rc ACC=0.46722, NMI=0.33795, V-Measure=0.33784, ARI=0.30689
+saving model to: ./results/rgbd/model_final.h56000
+aligned ratio: 14.70%. 1449
+V1-Iter 6000: acc=0.37750, nmi=0.34275, v-measure=0.34266, ari=0.19613; loss=0.00587
+V2-Iter 6000: acc=0.21532, nmi=0.07037, v-measure=0.07037, ari=0.04777; loss=0.00533
+Multi-view discriminative representation learning
+Multi-view discriminative representation learning
+unify target distribution of KL loss
+print: ./results/rgbd/6000
+rc ACC=0.46722, NMI=0.33795, V-Measure=0.33784, ARI=0.30689
+rc ACC=0.46722, NMI=0.33795, V-Measure=0.33784, ARI=0.30689
+print: ./results/rgbd/6010
+rc ACC=0.47757, NMI=0.34837, V-Measure=0.34807, ARI=0.30673
+print: ./results/rgbd/6020
+rc ACC=0.46170, NMI=0.33162, V-Measure=0.33150, ARI=0.29616
+print: ./results/rgbd/6030
+rc ACC=0.46515, NMI=0.33458, V-Measure=0.33456, ARI=0.29484
+print: ./results/rgbd/6040
+rc ACC=0.46791, NMI=0.33265, V-Measure=0.33263, ARI=0.29616
+print: ./results/rgbd/6050
+rc ACC=0.47274, NMI=0.34264, V-Measure=0.34256, ARI=0.30849
+print: ./results/rgbd/6060
+rc ACC=0.46584, NMI=0.33513, V-Measure=0.33502, ARI=0.30272
+print: ./results/rgbd/6070
+rc ACC=0.47274, NMI=0.34111, V-Measure=0.34094, ARI=0.30934
+print: ./results/rgbd/6080
+rc ACC=0.46446, NMI=0.32988, V-Measure=0.32976, ARI=0.29823
+print: ./results/rgbd/6090
+rc ACC=0.46998, NMI=0.34275, V-Measure=0.34262, ARI=0.31078
+print: ./results/rgbd/6100
+rc ACC=0.46101, NMI=0.33444, V-Measure=0.33438, ARI=0.30128
+print: ./results/rgbd/6110
+rc ACC=0.47067, NMI=0.33453, V-Measure=0.33450, ARI=0.30039
+print: ./results/rgbd/6120
+rc ACC=0.47343, NMI=0.34094, V-Measure=0.34081, ARI=0.31143
+print: ./results/rgbd/6130
+rc ACC=0.46377, NMI=0.33111, V-Measure=0.33103, ARI=0.29746
+print: ./results/rgbd/6140
+rc ACC=0.47550, NMI=0.34369, V-Measure=0.34343, ARI=0.30955
+print: ./results/rgbd/6150
+rc ACC=0.45894, NMI=0.32712, V-Measure=0.32697, ARI=0.29354
+print: ./results/rgbd/6160
+rc ACC=0.47619, NMI=0.34034, V-Measure=0.34017, ARI=0.31116
+print: ./results/rgbd/6170
+rc ACC=0.45825, NMI=0.32802, V-Measure=0.32792, ARI=0.29029
+print: ./results/rgbd/6180
+rc ACC=0.46446, NMI=0.33012, V-Measure=0.33003, ARI=0.29755
+print: ./results/rgbd/6190
+rc ACC=0.47205, NMI=0.33953, V-Measure=0.33941, ARI=0.30941
+print: ./results/rgbd/6200
+rc ACC=0.46446, NMI=0.33199, V-Measure=0.33188, ARI=0.30299
+rc ACC=0.46446, NMI=0.33199, V-Measure=0.33188, ARI=0.30299
+print: ./results/rgbd/6210
+rc ACC=0.47550, NMI=0.33958, V-Measure=0.33933, ARI=0.30869
+print: ./results/rgbd/6220
+rc ACC=0.46929, NMI=0.33890, V-Measure=0.33871, ARI=0.30924
+print: ./results/rgbd/6230
+rc ACC=0.47136, NMI=0.34294, V-Measure=0.34269, ARI=0.30647
+print: ./results/rgbd/6240
+rc ACC=0.46515, NMI=0.33689, V-Measure=0.33671, ARI=0.30668
+print: ./results/rgbd/6250
+rc ACC=0.47067, NMI=0.33173, V-Measure=0.33161, ARI=0.30452
+print: ./results/rgbd/6260
+rc ACC=0.47274, NMI=0.33983, V-Measure=0.33972, ARI=0.30930
+print: ./results/rgbd/6270
+rc ACC=0.46446, NMI=0.33217, V-Measure=0.33205, ARI=0.30035
+print: ./results/rgbd/6280
+rc ACC=0.47964, NMI=0.34649, V-Measure=0.34627, ARI=0.31498
+print: ./results/rgbd/6290
+rc ACC=0.46929, NMI=0.33680, V-Measure=0.33661, ARI=0.30633
+print: ./results/rgbd/6300
+rc ACC=0.47550, NMI=0.34683, V-Measure=0.34649, ARI=0.31041
+print: ./results/rgbd/6310
+rc ACC=0.46446, NMI=0.33366, V-Measure=0.33340, ARI=0.30110
+print: ./results/rgbd/6320
+rc ACC=0.46722, NMI=0.33027, V-Measure=0.33014, ARI=0.30130
+print: ./results/rgbd/6330
+rc ACC=0.47205, NMI=0.34266, V-Measure=0.34247, ARI=0.31203
+print: ./results/rgbd/6340
+rc ACC=0.46515, NMI=0.32966, V-Measure=0.32952, ARI=0.29944
+print: ./results/rgbd/6350
+rc ACC=0.47826, NMI=0.34643, V-Measure=0.34625, ARI=0.31821
+print: ./results/rgbd/6360
+rc ACC=0.46860, NMI=0.33478, V-Measure=0.33456, ARI=0.30443
+print: ./results/rgbd/6370
+rc ACC=0.47412, NMI=0.34811, V-Measure=0.34774, ARI=0.30752
+print: ./results/rgbd/6380
+rc ACC=0.46515, NMI=0.33636, V-Measure=0.33608, ARI=0.30366
+print: ./results/rgbd/6390
+rc ACC=0.47412, NMI=0.33998, V-Measure=0.33973, ARI=0.30902
+print: ./results/rgbd/6400
+rc ACC=0.46377, NMI=0.33264, V-Measure=0.33241, ARI=0.29892
+rc ACC=0.46377, NMI=0.33264, V-Measure=0.33241, ARI=0.29892
+print: ./results/rgbd/6410
+rc ACC=0.46653, NMI=0.33122, V-Measure=0.33107, ARI=0.30060
+print: ./results/rgbd/6420
+rc ACC=0.47826, NMI=0.34626, V-Measure=0.34606, ARI=0.31889
+print: ./results/rgbd/6430
+rc ACC=0.46653, NMI=0.33328, V-Measure=0.33304, ARI=0.30074
+print: ./results/rgbd/6440
+rc ACC=0.47412, NMI=0.34819, V-Measure=0.34782, ARI=0.31033
+print: ./results/rgbd/6450
+rc ACC=0.47136, NMI=0.34129, V-Measure=0.34099, ARI=0.30744
+print: ./results/rgbd/6460
+rc ACC=0.46998, NMI=0.33965, V-Measure=0.33933, ARI=0.30474
+print: ./results/rgbd/6470
+rc ACC=0.46446, NMI=0.33468, V-Measure=0.33433, ARI=0.29899
+print: ./results/rgbd/6480
+rc ACC=0.46653, NMI=0.33641, V-Measure=0.33622, ARI=0.30438
+print: ./results/rgbd/6490
+rc ACC=0.47205, NMI=0.33980, V-Measure=0.33959, ARI=0.31083
+print: ./results/rgbd/6500
+rc ACC=0.46929, NMI=0.33851, V-Measure=0.33828, ARI=0.30382
+print: ./results/rgbd/6510
+rc ACC=0.47757, NMI=0.34669, V-Measure=0.34633, ARI=0.31140
+print: ./results/rgbd/6520
+rc ACC=0.47205, NMI=0.34244, V-Measure=0.34215, ARI=0.30746
+print: ./results/rgbd/6530
+rc ACC=0.47136, NMI=0.34227, V-Measure=0.34186, ARI=0.30637
+print: ./results/rgbd/6540
+rc ACC=0.46584, NMI=0.33816, V-Measure=0.33780, ARI=0.29869
+print: ./results/rgbd/6550
+rc ACC=0.46860, NMI=0.33626, V-Measure=0.33599, ARI=0.30058
+print: ./results/rgbd/6560
+rc ACC=0.47481, NMI=0.34448, V-Measure=0.34418, ARI=0.30988
+print: ./results/rgbd/6570
+rc ACC=0.46515, NMI=0.33555, V-Measure=0.33534, ARI=0.29940
+print: ./results/rgbd/6580
+rc ACC=0.47688, NMI=0.34406, V-Measure=0.34376, ARI=0.31172
+print: ./results/rgbd/6590
+rc ACC=0.47205, NMI=0.33568, V-Measure=0.33541, ARI=0.30938
+print: ./results/rgbd/6600
+rc ACC=0.47619, NMI=0.35098, V-Measure=0.35054, ARI=0.30881
+rc ACC=0.47619, NMI=0.35098, V-Measure=0.35054, ARI=0.30881
+print: ./results/rgbd/6610
+rc ACC=0.45894, NMI=0.33242, V-Measure=0.33200, ARI=0.29767
+print: ./results/rgbd/6620
+rc ACC=0.46791, NMI=0.33690, V-Measure=0.33658, ARI=0.30309
+print: ./results/rgbd/6630
+rc ACC=0.46515, NMI=0.33417, V-Measure=0.33390, ARI=0.30269
+print: ./results/rgbd/6640
+rc ACC=0.46860, NMI=0.33736, V-Measure=0.33706, ARI=0.30103
+print: ./results/rgbd/6650
+rc ACC=0.47619, NMI=0.34489, V-Measure=0.34462, ARI=0.31496
+print: ./results/rgbd/6660
+rc ACC=0.46791, NMI=0.33441, V-Measure=0.33417, ARI=0.29866
+print: ./results/rgbd/6670
+rc ACC=0.47343, NMI=0.34974, V-Measure=0.34929, ARI=0.30892
+print: ./results/rgbd/6680
+rc ACC=0.46515, NMI=0.33845, V-Measure=0.33810, ARI=0.30272
+print: ./results/rgbd/6690
+rc ACC=0.46998, NMI=0.33786, V-Measure=0.33749, ARI=0.30387
+print: ./results/rgbd/6700
+rc ACC=0.46860, NMI=0.34100, V-Measure=0.34065, ARI=0.30339
+print: ./results/rgbd/6710
+rc ACC=0.46791, NMI=0.33880, V-Measure=0.33849, ARI=0.30226
+print: ./results/rgbd/6720
+rc ACC=0.47343, NMI=0.34380, V-Measure=0.34357, ARI=0.31050
+print: ./results/rgbd/6730
+rc ACC=0.46584, NMI=0.33083, V-Measure=0.33063, ARI=0.29728
+print: ./results/rgbd/6740
+rc ACC=0.47136, NMI=0.34534, V-Measure=0.34493, ARI=0.30912
+print: ./results/rgbd/6750
+rc ACC=0.47274, NMI=0.34352, V-Measure=0.34321, ARI=0.30853
+print: ./results/rgbd/6760
+rc ACC=0.47136, NMI=0.34378, V-Measure=0.34334, ARI=0.30669
+print: ./results/rgbd/6770
+rc ACC=0.46308, NMI=0.33584, V-Measure=0.33546, ARI=0.29585
+print: ./results/rgbd/6780
+rc ACC=0.46791, NMI=0.33981, V-Measure=0.33936, ARI=0.30347
+print: ./results/rgbd/6790
+rc ACC=0.47688, NMI=0.34369, V-Measure=0.34338, ARI=0.31230
+print: ./results/rgbd/6800
+rc ACC=0.47205, NMI=0.33754, V-Measure=0.33728, ARI=0.30422
+rc ACC=0.47205, NMI=0.33754, V-Measure=0.33728, ARI=0.30422
+print: ./results/rgbd/6810
+rc ACC=0.47550, NMI=0.34905, V-Measure=0.34858, ARI=0.30512
+print: ./results/rgbd/6820
+rc ACC=0.47412, NMI=0.34470, V-Measure=0.34443, ARI=0.31127
+print: ./results/rgbd/6830
+rc ACC=0.47412, NMI=0.34297, V-Measure=0.34244, ARI=0.30683
+print: ./results/rgbd/6840
+rc ACC=0.45756, NMI=0.32856, V-Measure=0.32820, ARI=0.29636
+print: ./results/rgbd/6850
+rc ACC=0.47481, NMI=0.34401, V-Measure=0.34352, ARI=0.30730
+print: ./results/rgbd/6860
+rc ACC=0.47067, NMI=0.34163, V-Measure=0.34145, ARI=0.30907
+print: ./results/rgbd/6870
+rc ACC=0.46170, NMI=0.33068, V-Measure=0.33044, ARI=0.30089
+print: ./results/rgbd/6880
+rc ACC=0.46584, NMI=0.33775, V-Measure=0.33738, ARI=0.30884
+print: ./results/rgbd/6890
+rc ACC=0.47136, NMI=0.33638, V-Measure=0.33613, ARI=0.30405
+print: ./results/rgbd/6900
+rc ACC=0.47274, NMI=0.34395, V-Measure=0.34347, ARI=0.30937
+print: ./results/rgbd/6910
+rc ACC=0.45549, NMI=0.33221, V-Measure=0.33166, ARI=0.28967
+print: ./results/rgbd/6920
+rc ACC=0.46653, NMI=0.33669, V-Measure=0.33624, ARI=0.30296
+print: ./results/rgbd/6930
+rc ACC=0.47619, NMI=0.34393, V-Measure=0.34365, ARI=0.31223
+print: ./results/rgbd/6940
+rc ACC=0.47136, NMI=0.34020, V-Measure=0.33987, ARI=0.30361
+print: ./results/rgbd/6950
+rc ACC=0.47343, NMI=0.34228, V-Measure=0.34184, ARI=0.30925
+print: ./results/rgbd/6960
+rc ACC=0.46998, NMI=0.33290, V-Measure=0.33266, ARI=0.30355
+print: ./results/rgbd/6970
+rc ACC=0.47688, NMI=0.34540, V-Measure=0.34486, ARI=0.30835
+print: ./results/rgbd/6980
+rc ACC=0.46308, NMI=0.33562, V-Measure=0.33511, ARI=0.30058
+print: ./results/rgbd/6990
+rc ACC=0.47343, NMI=0.34507, V-Measure=0.34455, ARI=0.30692
+print: ./results/rgbd/7000
+rc ACC=0.46791, NMI=0.33686, V-Measure=0.33644, ARI=0.30426
+rc ACC=0.46791, NMI=0.33686, V-Measure=0.33644, ARI=0.30426
+print: ./results/rgbd/7010
+rc ACC=0.47205, NMI=0.33678, V-Measure=0.33635, ARI=0.30511
+print: ./results/rgbd/7020
+rc ACC=0.47067, NMI=0.33806, V-Measure=0.33774, ARI=0.30535
+print: ./results/rgbd/7030
+rc ACC=0.46791, NMI=0.33027, V-Measure=0.32999, ARI=0.29934
+print: ./results/rgbd/7040
+rc ACC=0.47619, NMI=0.34416, V-Measure=0.34371, ARI=0.31183
+print: ./results/rgbd/7050
+rc ACC=0.46584, NMI=0.33812, V-Measure=0.33768, ARI=0.30237
+print: ./results/rgbd/7060
+rc ACC=0.47481, NMI=0.34765, V-Measure=0.34695, ARI=0.30583
+print: ./results/rgbd/7070
+rc ACC=0.47136, NMI=0.34397, V-Measure=0.34350, ARI=0.30591
+print: ./results/rgbd/7080
+rc ACC=0.46722, NMI=0.33557, V-Measure=0.33514, ARI=0.30303
+print: ./results/rgbd/7090
+rc ACC=0.47412, NMI=0.34068, V-Measure=0.34025, ARI=0.30803
+print: ./results/rgbd/7100
+rc ACC=0.47067, NMI=0.33429, V-Measure=0.33402, ARI=0.30345
+print: ./results/rgbd/7110
+rc ACC=0.47757, NMI=0.34820, V-Measure=0.34771, ARI=0.31079
+print: ./results/rgbd/7120
+rc ACC=0.46584, NMI=0.33549, V-Measure=0.33500, ARI=0.30171
+print: ./results/rgbd/7130
+rc ACC=0.47481, NMI=0.34729, V-Measure=0.34661, ARI=0.30793
+print: ./results/rgbd/7140
+rc ACC=0.46446, NMI=0.33725, V-Measure=0.33669, ARI=0.29733
+print: ./results/rgbd/7150
+rc ACC=0.47481, NMI=0.34725, V-Measure=0.34669, ARI=0.31357
+print: ./results/rgbd/7160
+rc ACC=0.46584, NMI=0.33481, V-Measure=0.33440, ARI=0.29886
+print: ./results/rgbd/7170
+rc ACC=0.47757, NMI=0.34162, V-Measure=0.34125, ARI=0.31211
+print: ./results/rgbd/7180
+rc ACC=0.47826, NMI=0.34761, V-Measure=0.34705, ARI=0.31531
+print: ./results/rgbd/7190
+rc ACC=0.46653, NMI=0.33424, V-Measure=0.33385, ARI=0.29723
+print: ./results/rgbd/7200
+rc ACC=0.47964, NMI=0.35196, V-Measure=0.35115, ARI=0.30712
+rc ACC=0.47964, NMI=0.35196, V-Measure=0.35115, ARI=0.30712
+print: ./results/rgbd/7210
+rc ACC=0.47205, NMI=0.34283, V-Measure=0.34227, ARI=0.30498
+print: ./results/rgbd/7220
+rc ACC=0.46860, NMI=0.34279, V-Measure=0.34205, ARI=0.31016
+print: ./results/rgbd/7230
+rc ACC=0.46929, NMI=0.33914, V-Measure=0.33864, ARI=0.30320
+print: ./results/rgbd/7240
+rc ACC=0.47343, NMI=0.33917, V-Measure=0.33869, ARI=0.30768
+print: ./results/rgbd/7250
+rc ACC=0.46653, NMI=0.33870, V-Measure=0.33833, ARI=0.30037
+print: ./results/rgbd/7260
+rc ACC=0.46998, NMI=0.33780, V-Measure=0.33735, ARI=0.30539
+print: ./results/rgbd/7270
+rc ACC=0.47343, NMI=0.34996, V-Measure=0.34931, ARI=0.31253
+print: ./results/rgbd/7280
+rc ACC=0.47688, NMI=0.34794, V-Measure=0.34727, ARI=0.30487
+print: ./results/rgbd/7290
+rc ACC=0.47205, NMI=0.34395, V-Measure=0.34313, ARI=0.30762
+print: ./results/rgbd/7300
+rc ACC=0.47067, NMI=0.33862, V-Measure=0.33805, ARI=0.30081
+print: ./results/rgbd/7310
+rc ACC=0.47550, NMI=0.34333, V-Measure=0.34269, ARI=0.31595
+print: ./results/rgbd/7320
+rc ACC=0.46998, NMI=0.33910, V-Measure=0.33867, ARI=0.30610
+print: ./results/rgbd/7330
+rc ACC=0.46722, NMI=0.33156, V-Measure=0.33113, ARI=0.29867
+print: ./results/rgbd/7340
+rc ACC=0.47619, NMI=0.34305, V-Measure=0.34249, ARI=0.30916
+print: ./results/rgbd/7350
+rc ACC=0.47550, NMI=0.34846, V-Measure=0.34792, ARI=0.31180
+print: ./results/rgbd/7360
+rc ACC=0.47619, NMI=0.34923, V-Measure=0.34832, ARI=0.30987
+print: ./results/rgbd/7370
+rc ACC=0.46791, NMI=0.34292, V-Measure=0.34216, ARI=0.30317
+print: ./results/rgbd/7380
+rc ACC=0.47205, NMI=0.34522, V-Measure=0.34442, ARI=0.30695
+print: ./results/rgbd/7390
+rc ACC=0.46446, NMI=0.33578, V-Measure=0.33534, ARI=0.30562
+print: ./results/rgbd/7400
+rc ACC=0.47343, NMI=0.33262, V-Measure=0.33214, ARI=0.30442
+rc ACC=0.47343, NMI=0.33262, V-Measure=0.33214, ARI=0.30442
+print: ./results/rgbd/7410
+rc ACC=0.47136, NMI=0.34248, V-Measure=0.34187, ARI=0.30656
+print: ./results/rgbd/7420
+rc ACC=0.47688, NMI=0.34604, V-Measure=0.34551, ARI=0.31021
+print: ./results/rgbd/7430
+rc ACC=0.47895, NMI=0.34758, V-Measure=0.34645, ARI=0.29866
+print: ./results/rgbd/7440
+rc ACC=0.47136, NMI=0.34140, V-Measure=0.34044, ARI=0.29225
+print: ./results/rgbd/7450
+rc ACC=0.47067, NMI=0.34391, V-Measure=0.34312, ARI=0.31098
+print: ./results/rgbd/7460
+rc ACC=0.46515, NMI=0.34003, V-Measure=0.33942, ARI=0.30627
+print: ./results/rgbd/7470
+rc ACC=0.46791, NMI=0.33476, V-Measure=0.33428, ARI=0.30000
+print: ./results/rgbd/7480
+rc ACC=0.46860, NMI=0.33995, V-Measure=0.33943, ARI=0.30734
+print: ./results/rgbd/7490
+rc ACC=0.47136, NMI=0.33719, V-Measure=0.33661, ARI=0.30975
+print: ./results/rgbd/7500
+rc ACC=0.47619, NMI=0.34640, V-Measure=0.34569, ARI=0.30887
+print: ./results/rgbd/7510
+rc ACC=0.47343, NMI=0.34145, V-Measure=0.34095, ARI=0.30229
+print: ./results/rgbd/7520
+rc ACC=0.46446, NMI=0.33459, V-Measure=0.33375, ARI=0.29605
+print: ./results/rgbd/7530
+rc ACC=0.45894, NMI=0.32814, V-Measure=0.32760, ARI=0.29356
+print: ./results/rgbd/7540
+rc ACC=0.46860, NMI=0.33845, V-Measure=0.33792, ARI=0.30253
+print: ./results/rgbd/7550
+rc ACC=0.46446, NMI=0.32701, V-Measure=0.32659, ARI=0.29952
+print: ./results/rgbd/7560
+rc ACC=0.47205, NMI=0.33611, V-Measure=0.33560, ARI=0.30932
+print: ./results/rgbd/7570
+rc ACC=0.47067, NMI=0.33473, V-Measure=0.33384, ARI=0.30044
+print: ./results/rgbd/7580
+rc ACC=0.46653, NMI=0.33618, V-Measure=0.33534, ARI=0.29783
+print: ./results/rgbd/7590
+rc ACC=0.47550, NMI=0.34197, V-Measure=0.34096, ARI=0.30338
+print: ./results/rgbd/7600
+rc ACC=0.46377, NMI=0.33045, V-Measure=0.32974, ARI=0.30040
+rc ACC=0.46377, NMI=0.33045, V-Measure=0.32974, ARI=0.30040
+print: ./results/rgbd/7610
+rc ACC=0.47274, NMI=0.34577, V-Measure=0.34483, ARI=0.30720
+print: ./results/rgbd/7620
+rc ACC=0.46101, NMI=0.32710, V-Measure=0.32647, ARI=0.29553
+print: ./results/rgbd/7630
+rc ACC=0.46377, NMI=0.32686, V-Measure=0.32643, ARI=0.30568
+print: ./results/rgbd/7640
+rc ACC=0.47688, NMI=0.34042, V-Measure=0.33961, ARI=0.30654
+print: ./results/rgbd/7650
+rc ACC=0.46860, NMI=0.33498, V-Measure=0.33415, ARI=0.29830
+print: ./results/rgbd/7660
+rc ACC=0.47067, NMI=0.33728, V-Measure=0.33623, ARI=0.30242
+print: ./results/rgbd/7670
+rc ACC=0.47136, NMI=0.33729, V-Measure=0.33655, ARI=0.30325
+print: ./results/rgbd/7680
+rc ACC=0.46377, NMI=0.33897, V-Measure=0.33763, ARI=0.29135
+print: ./results/rgbd/7690
+rc ACC=0.46032, NMI=0.32396, V-Measure=0.32320, ARI=0.29650
+print: ./results/rgbd/7700
+rc ACC=0.46860, NMI=0.33320, V-Measure=0.33259, ARI=0.30532
+print: ./results/rgbd/7710
+rc ACC=0.47274, NMI=0.33558, V-Measure=0.33469, ARI=0.30046
+print: ./results/rgbd/7720
+rc ACC=0.46377, NMI=0.32803, V-Measure=0.32728, ARI=0.29779
+print: ./results/rgbd/7730
+rc ACC=0.47205, NMI=0.33825, V-Measure=0.33732, ARI=0.30863
+print: ./results/rgbd/7740
+rc ACC=0.46653, NMI=0.32498, V-Measure=0.32398, ARI=0.28640
+print: ./results/rgbd/7750
+rc ACC=0.46032, NMI=0.33706, V-Measure=0.33548, ARI=0.28609
+print: ./results/rgbd/7760
+rc ACC=0.46239, NMI=0.32895, V-Measure=0.32809, ARI=0.30197
+print: ./results/rgbd/7770
+rc ACC=0.46515, NMI=0.33136, V-Measure=0.33061, ARI=0.30015
+print: ./results/rgbd/7780
+rc ACC=0.46860, NMI=0.33939, V-Measure=0.33822, ARI=0.29524
+print: ./results/rgbd/7790
+rc ACC=0.46515, NMI=0.32750, V-Measure=0.32683, ARI=0.30158
+print: ./results/rgbd/7800
+rc ACC=0.47067, NMI=0.33190, V-Measure=0.33100, ARI=0.30551
+rc ACC=0.47067, NMI=0.33190, V-Measure=0.33100, ARI=0.30551
+print: ./results/rgbd/7810
+rc ACC=0.46446, NMI=0.32527, V-Measure=0.32425, ARI=0.28582
+print: ./results/rgbd/7820
+rc ACC=0.45894, NMI=0.32985, V-Measure=0.32838, ARI=0.28615
+print: ./results/rgbd/7830
+rc ACC=0.45963, NMI=0.32325, V-Measure=0.32236, ARI=0.29459
+print: ./results/rgbd/7840
+rc ACC=0.46584, NMI=0.33096, V-Measure=0.33004, ARI=0.29920
+print: ./results/rgbd/7850
+rc ACC=0.46929, NMI=0.33632, V-Measure=0.33521, ARI=0.29581
+print: ./results/rgbd/7860
+rc ACC=0.46308, NMI=0.32283, V-Measure=0.32211, ARI=0.29652
+print: ./results/rgbd/7870
+rc ACC=0.46584, NMI=0.32932, V-Measure=0.32835, ARI=0.30677
+print: ./results/rgbd/7880
+rc ACC=0.46308, NMI=0.32421, V-Measure=0.32320, ARI=0.28383
+print: ./results/rgbd/7890
+rc ACC=0.45825, NMI=0.32147, V-Measure=0.32009, ARI=0.29158
+print: ./results/rgbd/7900
+rc ACC=0.45342, NMI=0.31855, V-Measure=0.31760, ARI=0.29173
+print: ./results/rgbd/7910
+rc ACC=0.46929, NMI=0.33479, V-Measure=0.33350, ARI=0.29198
+print: ./results/rgbd/7920
+rc ACC=0.47688, NMI=0.34051, V-Measure=0.33925, ARI=0.29733
+print: ./results/rgbd/7930
+rc ACC=0.47205, NMI=0.32806, V-Measure=0.32746, ARI=0.30147
+print: ./results/rgbd/7940
+rc ACC=0.46101, NMI=0.32377, V-Measure=0.32265, ARI=0.30219
+print: ./results/rgbd/7950
+rc ACC=0.45825, NMI=0.31848, V-Measure=0.31728, ARI=0.27739
+print: ./results/rgbd/7960
+rc ACC=0.46515, NMI=0.32958, V-Measure=0.32866, ARI=0.30404
+print: ./results/rgbd/7970
+rc ACC=0.46170, NMI=0.32083, V-Measure=0.31991, ARI=0.29505
+print: ./results/rgbd/7980
+rc ACC=0.45963, NMI=0.32462, V-Measure=0.32296, ARI=0.27302
+print: ./results/rgbd/7990
+rc ACC=0.45963, NMI=0.32329, V-Measure=0.32206, ARI=0.29220
+
+
+ACC=0.44582, NMI=0.41669, V-Measure=0.41574, ARI=0.28307
+rc ACC=0.46308, NMI=0.32210, V-Measure=0.32114, ARI=0.28942
+saving model to: ./results/rgbd/model_final.h58000
+aligned ratio: 16.49%. 1449
+V1-Iter 8000: acc=0.44582, nmi=0.38234, v-measure=0.38211, ari=0.27183; loss=0.00541
+V2-Iter 8000: acc=0.27536, nmi=0.07995, v-measure=0.07967, ari=0.05029; loss=0.00482
+Multi-view discriminative representation learning
+Multi-view discriminative representation learning
+unify target distribution of KL loss
+print: ./results/rgbd/8000
+rc ACC=0.46308, NMI=0.32210, V-Measure=0.32114, ARI=0.28942
+rc ACC=0.46308, NMI=0.32210, V-Measure=0.32114, ARI=0.28942
+print: ./results/rgbd/8010
+rc ACC=0.46584, NMI=0.32879, V-Measure=0.32783, ARI=0.29631
+print: ./results/rgbd/8020
+rc ACC=0.46653, NMI=0.32381, V-Measure=0.32284, ARI=0.29185
+print: ./results/rgbd/8030
+rc ACC=0.46239, NMI=0.32013, V-Measure=0.31877, ARI=0.29085
+print: ./results/rgbd/8040
+rc ACC=0.46653, NMI=0.32530, V-Measure=0.32401, ARI=0.28869
+print: ./results/rgbd/8050
+rc ACC=0.46170, NMI=0.33124, V-Measure=0.32926, ARI=0.27125
+print: ./results/rgbd/8060
+rc ACC=0.46101, NMI=0.32376, V-Measure=0.32245, ARI=0.29026
+print: ./results/rgbd/8070
+rc ACC=0.46239, NMI=0.32142, V-Measure=0.32017, ARI=0.28726
+print: ./results/rgbd/8080
+rc ACC=0.46170, NMI=0.32542, V-Measure=0.32438, ARI=0.29516
+print: ./results/rgbd/8090
+rc ACC=0.46239, NMI=0.32032, V-Measure=0.31930, ARI=0.28491
+print: ./results/rgbd/8100
+rc ACC=0.46239, NMI=0.32519, V-Measure=0.32370, ARI=0.29090
+print: ./results/rgbd/8110
+rc ACC=0.46446, NMI=0.32363, V-Measure=0.32224, ARI=0.28624
+print: ./results/rgbd/8120
+rc ACC=0.46032, NMI=0.32543, V-Measure=0.32341, ARI=0.26845
+print: ./results/rgbd/8130
+rc ACC=0.45756, NMI=0.31710, V-Measure=0.31573, ARI=0.28621
+print: ./results/rgbd/8140
+rc ACC=0.46515, NMI=0.32265, V-Measure=0.32120, ARI=0.28101
+print: ./results/rgbd/8150
+rc ACC=0.45894, NMI=0.32239, V-Measure=0.32087, ARI=0.28312
+print: ./results/rgbd/8160
+rc ACC=0.45963, NMI=0.31492, V-Measure=0.31357, ARI=0.27727
+print: ./results/rgbd/8170
+rc ACC=0.46308, NMI=0.32542, V-Measure=0.32423, ARI=0.29744
+print: ./results/rgbd/8180
+rc ACC=0.46584, NMI=0.32031, V-Measure=0.31894, ARI=0.28502
+print: ./results/rgbd/8190
+rc ACC=0.46032, NMI=0.32874, V-Measure=0.32690, ARI=0.27225
+print: ./results/rgbd/8200
+rc ACC=0.45825, NMI=0.31896, V-Measure=0.31745, ARI=0.28501
+rc ACC=0.45825, NMI=0.31896, V-Measure=0.31745, ARI=0.28501
+print: ./results/rgbd/8210
+rc ACC=0.46101, NMI=0.32442, V-Measure=0.32275, ARI=0.27526
+print: ./results/rgbd/8220
+rc ACC=0.45687, NMI=0.32032, V-Measure=0.31851, ARI=0.26964
+print: ./results/rgbd/8230
+rc ACC=0.45963, NMI=0.31577, V-Measure=0.31442, ARI=0.27924
+print: ./results/rgbd/8240
+rc ACC=0.46515, NMI=0.32680, V-Measure=0.32551, ARI=0.29591
+print: ./results/rgbd/8250
+rc ACC=0.46515, NMI=0.32588, V-Measure=0.32455, ARI=0.29407
+print: ./results/rgbd/8260
+rc ACC=0.46032, NMI=0.32450, V-Measure=0.32245, ARI=0.26358
+print: ./results/rgbd/8270
+rc ACC=0.46032, NMI=0.31806, V-Measure=0.31689, ARI=0.28622
+print: ./results/rgbd/8280
+rc ACC=0.45756, NMI=0.32263, V-Measure=0.32070, ARI=0.26606
+print: ./results/rgbd/8290
+rc ACC=0.45066, NMI=0.31947, V-Measure=0.31761, ARI=0.26458
+print: ./results/rgbd/8300
+rc ACC=0.46584, NMI=0.32880, V-Measure=0.32733, ARI=0.29026
+print: ./results/rgbd/8310
+rc ACC=0.45756, NMI=0.32305, V-Measure=0.32219, ARI=0.29163
+print: ./results/rgbd/8320
+rc ACC=0.46584, NMI=0.32507, V-Measure=0.32364, ARI=0.29250
+print: ./results/rgbd/8330
+rc ACC=0.45894, NMI=0.32299, V-Measure=0.32099, ARI=0.26677
+print: ./results/rgbd/8340
+rc ACC=0.46584, NMI=0.33163, V-Measure=0.33009, ARI=0.29090
+print: ./results/rgbd/8350
+rc ACC=0.46377, NMI=0.33347, V-Measure=0.33081, ARI=0.26518
+print: ./results/rgbd/8360
+rc ACC=0.44997, NMI=0.31912, V-Measure=0.31715, ARI=0.25875
+print: ./results/rgbd/8370
+rc ACC=0.46584, NMI=0.33146, V-Measure=0.32946, ARI=0.27529
+print: ./results/rgbd/8380
+rc ACC=0.45894, NMI=0.31467, V-Measure=0.31374, ARI=0.28789
+print: ./results/rgbd/8390
+rc ACC=0.47136, NMI=0.33085, V-Measure=0.32960, ARI=0.30643
+print: ./results/rgbd/8400
+rc ACC=0.45756, NMI=0.31582, V-Measure=0.31395, ARI=0.27202
+rc ACC=0.45756, NMI=0.31582, V-Measure=0.31395, ARI=0.27202
+print: ./results/rgbd/8410
+rc ACC=0.46584, NMI=0.32173, V-Measure=0.32039, ARI=0.29372
+print: ./results/rgbd/8420
+rc ACC=0.46308, NMI=0.32586, V-Measure=0.32346, ARI=0.26845
+print: ./results/rgbd/8430
+rc ACC=0.45549, NMI=0.31921, V-Measure=0.31736, ARI=0.26924
+print: ./results/rgbd/8440
+rc ACC=0.46791, NMI=0.33197, V-Measure=0.32962, ARI=0.27310
+print: ./results/rgbd/8450
+rc ACC=0.46377, NMI=0.31981, V-Measure=0.31847, ARI=0.29053
+print: ./results/rgbd/8460
+rc ACC=0.46515, NMI=0.32387, V-Measure=0.32242, ARI=0.29357
+print: ./results/rgbd/8470
+rc ACC=0.46170, NMI=0.32020, V-Measure=0.31848, ARI=0.27936
+print: ./results/rgbd/8480
+rc ACC=0.46722, NMI=0.32247, V-Measure=0.32119, ARI=0.29611
+print: ./results/rgbd/8490
+rc ACC=0.46032, NMI=0.32124, V-Measure=0.31922, ARI=0.26932
+print: ./results/rgbd/8500
+rc ACC=0.45342, NMI=0.31505, V-Measure=0.31306, ARI=0.26797
+print: ./results/rgbd/8510
+rc ACC=0.46515, NMI=0.33054, V-Measure=0.32792, ARI=0.26959
+print: ./results/rgbd/8520
+rc ACC=0.45894, NMI=0.31930, V-Measure=0.31775, ARI=0.27767
+print: ./results/rgbd/8530
+rc ACC=0.46239, NMI=0.32264, V-Measure=0.32080, ARI=0.27761
+print: ./results/rgbd/8540
+rc ACC=0.45273, NMI=0.31711, V-Measure=0.31531, ARI=0.27250
+print: ./results/rgbd/8550
+rc ACC=0.46791, NMI=0.32675, V-Measure=0.32564, ARI=0.29715
+print: ./results/rgbd/8560
+rc ACC=0.45894, NMI=0.32198, V-Measure=0.31968, ARI=0.26719
+print: ./results/rgbd/8570
+rc ACC=0.45687, NMI=0.31998, V-Measure=0.31814, ARI=0.27702
+print: ./results/rgbd/8580
+rc ACC=0.46860, NMI=0.33066, V-Measure=0.32773, ARI=0.27042
+print: ./results/rgbd/8590
+rc ACC=0.45687, NMI=0.32083, V-Measure=0.31908, ARI=0.27712
+print: ./results/rgbd/8600
+rc ACC=0.45342, NMI=0.31727, V-Measure=0.31520, ARI=0.26888
+rc ACC=0.45342, NMI=0.31727, V-Measure=0.31520, ARI=0.26888
+print: ./results/rgbd/8610
+rc ACC=0.45480, NMI=0.31532, V-Measure=0.31353, ARI=0.27467
+print: ./results/rgbd/8620
+rc ACC=0.46584, NMI=0.32544, V-Measure=0.32424, ARI=0.29879
+print: ./results/rgbd/8630
+rc ACC=0.45411, NMI=0.32119, V-Measure=0.31929, ARI=0.27974
+print: ./results/rgbd/8640
+rc ACC=0.45756, NMI=0.31987, V-Measure=0.31783, ARI=0.26913
+print: ./results/rgbd/8650
+rc ACC=0.46446, NMI=0.32508, V-Measure=0.32265, ARI=0.27266
+print: ./results/rgbd/8660
+rc ACC=0.45825, NMI=0.31794, V-Measure=0.31572, ARI=0.26625
+print: ./results/rgbd/8670
+rc ACC=0.45411, NMI=0.32025, V-Measure=0.31759, ARI=0.26044
+print: ./results/rgbd/8680
+rc ACC=0.45618, NMI=0.32173, V-Measure=0.31961, ARI=0.27059
+print: ./results/rgbd/8690
+rc ACC=0.45963, NMI=0.31954, V-Measure=0.31812, ARI=0.29247
+print: ./results/rgbd/8700
+rc ACC=0.45756, NMI=0.31960, V-Measure=0.31769, ARI=0.27321
+print: ./results/rgbd/8710
+rc ACC=0.45687, NMI=0.31505, V-Measure=0.31309, ARI=0.26793
+print: ./results/rgbd/8720
+rc ACC=0.45963, NMI=0.32557, V-Measure=0.32285, ARI=0.26107
+print: ./results/rgbd/8730
+rc ACC=0.45480, NMI=0.31435, V-Measure=0.31203, ARI=0.26129
+print: ./results/rgbd/8740
+rc ACC=0.45687, NMI=0.31782, V-Measure=0.31495, ARI=0.25574
+print: ./results/rgbd/8750
+rc ACC=0.44997, NMI=0.31392, V-Measure=0.31167, ARI=0.26322
+print: ./results/rgbd/8760
+rc ACC=0.46032, NMI=0.32069, V-Measure=0.31872, ARI=0.27275
+print: ./results/rgbd/8770
+rc ACC=0.45066, NMI=0.31130, V-Measure=0.30989, ARI=0.27654
+print: ./results/rgbd/8780
+rc ACC=0.45549, NMI=0.31334, V-Measure=0.31160, ARI=0.27484
+print: ./results/rgbd/8790
+rc ACC=0.44859, NMI=0.31442, V-Measure=0.31165, ARI=0.25727
+print: ./results/rgbd/8800
+rc ACC=0.45480, NMI=0.31801, V-Measure=0.31575, ARI=0.26600
+rc ACC=0.45480, NMI=0.31801, V-Measure=0.31575, ARI=0.26600
+print: ./results/rgbd/8810
+rc ACC=0.46170, NMI=0.32369, V-Measure=0.32039, ARI=0.25289
+print: ./results/rgbd/8820
+rc ACC=0.45135, NMI=0.31391, V-Measure=0.31183, ARI=0.26576
+print: ./results/rgbd/8830
+rc ACC=0.45480, NMI=0.31879, V-Measure=0.31636, ARI=0.26315
+print: ./results/rgbd/8840
+rc ACC=0.44928, NMI=0.31204, V-Measure=0.31013, ARI=0.26921
+print: ./results/rgbd/8850
+rc ACC=0.45825, NMI=0.31598, V-Measure=0.31424, ARI=0.27843
+print: ./results/rgbd/8860
+rc ACC=0.44928, NMI=0.31218, V-Measure=0.30998, ARI=0.26045
+print: ./results/rgbd/8870
+rc ACC=0.45135, NMI=0.31135, V-Measure=0.30898, ARI=0.25893
+print: ./results/rgbd/8880
+rc ACC=0.46170, NMI=0.32193, V-Measure=0.31902, ARI=0.25978
+print: ./results/rgbd/8890
+rc ACC=0.45342, NMI=0.31588, V-Measure=0.31379, ARI=0.26386
+print: ./results/rgbd/8900
+rc ACC=0.45273, NMI=0.31525, V-Measure=0.31234, ARI=0.25176
+print: ./results/rgbd/8910
+rc ACC=0.44306, NMI=0.31086, V-Measure=0.30857, ARI=0.26087
+print: ./results/rgbd/8920
+rc ACC=0.44720, NMI=0.30358, V-Measure=0.30158, ARI=0.26017
+print: ./results/rgbd/8930
+rc ACC=0.45204, NMI=0.31560, V-Measure=0.31344, ARI=0.26955
+print: ./results/rgbd/8940
+rc ACC=0.44928, NMI=0.31634, V-Measure=0.31393, ARI=0.25789
+print: ./results/rgbd/8950
+rc ACC=0.44720, NMI=0.30612, V-Measure=0.30298, ARI=0.24268
+print: ./results/rgbd/8960
+rc ACC=0.45549, NMI=0.31681, V-Measure=0.31478, ARI=0.26312
+print: ./results/rgbd/8970
+rc ACC=0.44997, NMI=0.31003, V-Measure=0.30695, ARI=0.24079
+print: ./results/rgbd/8980
+rc ACC=0.43823, NMI=0.30635, V-Measure=0.30347, ARI=0.24968
+print: ./results/rgbd/8990
+rc ACC=0.45204, NMI=0.31031, V-Measure=0.30813, ARI=0.26426
+print: ./results/rgbd/9000
+rc ACC=0.44859, NMI=0.30599, V-Measure=0.30417, ARI=0.26599
+rc ACC=0.44859, NMI=0.30599, V-Measure=0.30417, ARI=0.26599
+print: ./results/rgbd/9010
+rc ACC=0.45135, NMI=0.30778, V-Measure=0.30571, ARI=0.26222
+print: ./results/rgbd/9020
+rc ACC=0.44099, NMI=0.30617, V-Measure=0.30290, ARI=0.23994
+print: ./results/rgbd/9030
+rc ACC=0.46170, NMI=0.32091, V-Measure=0.31838, ARI=0.26260
+print: ./results/rgbd/9040
+rc ACC=0.45342, NMI=0.31660, V-Measure=0.31302, ARI=0.24459
+print: ./results/rgbd/9050
+rc ACC=0.43547, NMI=0.30697, V-Measure=0.30371, ARI=0.24631
+print: ./results/rgbd/9060
+rc ACC=0.46446, NMI=0.32645, V-Measure=0.32350, ARI=0.26664
+print: ./results/rgbd/9070
+rc ACC=0.45963, NMI=0.31449, V-Measure=0.31294, ARI=0.28028
+print: ./results/rgbd/9080
+rc ACC=0.47205, NMI=0.32325, V-Measure=0.32164, ARI=0.29686
+print: ./results/rgbd/9090
+rc ACC=0.45342, NMI=0.31569, V-Measure=0.31286, ARI=0.25699
+print: ./results/rgbd/9100
+rc ACC=0.45825, NMI=0.31821, V-Measure=0.31568, ARI=0.26536
+print: ./results/rgbd/9110
+rc ACC=0.46584, NMI=0.32530, V-Measure=0.32179, ARI=0.25570
+print: ./results/rgbd/9120
+rc ACC=0.45204, NMI=0.31037, V-Measure=0.30728, ARI=0.24518
+print: ./results/rgbd/9130
+rc ACC=0.45480, NMI=0.31888, V-Measure=0.31558, ARI=0.25554
+print: ./results/rgbd/9140
+rc ACC=0.46101, NMI=0.32180, V-Measure=0.31982, ARI=0.28027
+print: ./results/rgbd/9150
+rc ACC=0.46308, NMI=0.32100, V-Measure=0.31895, ARI=0.27479
+print: ./results/rgbd/9160
+rc ACC=0.45135, NMI=0.31181, V-Measure=0.30920, ARI=0.26009
+print: ./results/rgbd/9170
+rc ACC=0.44997, NMI=0.30972, V-Measure=0.30733, ARI=0.25673
+print: ./results/rgbd/9180
+rc ACC=0.45549, NMI=0.31178, V-Measure=0.30789, ARI=0.23425
+print: ./results/rgbd/9190
+rc ACC=0.44928, NMI=0.30322, V-Measure=0.29989, ARI=0.23578
+print: ./results/rgbd/9200
+rc ACC=0.44790, NMI=0.30703, V-Measure=0.30367, ARI=0.23763
+rc ACC=0.44790, NMI=0.30703, V-Measure=0.30367, ARI=0.23763
+print: ./results/rgbd/9210
+rc ACC=0.45549, NMI=0.31531, V-Measure=0.31290, ARI=0.26802
+print: ./results/rgbd/9220
+rc ACC=0.45066, NMI=0.30436, V-Measure=0.30203, ARI=0.25351
+print: ./results/rgbd/9230
+rc ACC=0.44859, NMI=0.31074, V-Measure=0.30811, ARI=0.25666
+print: ./results/rgbd/9240
+rc ACC=0.45411, NMI=0.30890, V-Measure=0.30553, ARI=0.23998
+print: ./results/rgbd/9250
+rc ACC=0.44720, NMI=0.30750, V-Measure=0.30341, ARI=0.22651
+print: ./results/rgbd/9260
+rc ACC=0.44513, NMI=0.30059, V-Measure=0.29711, ARI=0.23074
+print: ./results/rgbd/9270
+rc ACC=0.44997, NMI=0.31049, V-Measure=0.30665, ARI=0.23086
+print: ./results/rgbd/9280
+rc ACC=0.44513, NMI=0.30583, V-Measure=0.30303, ARI=0.25368
+print: ./results/rgbd/9290
+rc ACC=0.44444, NMI=0.29876, V-Measure=0.29632, ARI=0.24605
+print: ./results/rgbd/9300
+rc ACC=0.44720, NMI=0.30510, V-Measure=0.30273, ARI=0.25838
+print: ./results/rgbd/9310
+rc ACC=0.44720, NMI=0.29764, V-Measure=0.29489, ARI=0.24044
+print: ./results/rgbd/9320
+rc ACC=0.43961, NMI=0.29948, V-Measure=0.29585, ARI=0.22394
+print: ./results/rgbd/9330
+rc ACC=0.43478, NMI=0.28787, V-Measure=0.28412, ARI=0.21929
+print: ./results/rgbd/9340
+rc ACC=0.43823, NMI=0.28794, V-Measure=0.28432, ARI=0.22001
+print: ./results/rgbd/9350
+rc ACC=0.44651, NMI=0.30328, V-Measure=0.30092, ARI=0.25956
+print: ./results/rgbd/9360
+rc ACC=0.43685, NMI=0.28683, V-Measure=0.28354, ARI=0.22752
+print: ./results/rgbd/9370
+rc ACC=0.44099, NMI=0.29424, V-Measure=0.29131, ARI=0.23628
+print: ./results/rgbd/9380
+rc ACC=0.44168, NMI=0.28816, V-Measure=0.28509, ARI=0.22476
+print: ./results/rgbd/9390
+rc ACC=0.44168, NMI=0.29189, V-Measure=0.28840, ARI=0.22677
+print: ./results/rgbd/9400
+rc ACC=0.43892, NMI=0.29085, V-Measure=0.28719, ARI=0.22321
+rc ACC=0.43892, NMI=0.29085, V-Measure=0.28719, ARI=0.22321
+print: ./results/rgbd/9410
+rc ACC=0.43616, NMI=0.29136, V-Measure=0.28788, ARI=0.22839
+print: ./results/rgbd/9420
+rc ACC=0.43823, NMI=0.29205, V-Measure=0.28906, ARI=0.23304
+print: ./results/rgbd/9430
+rc ACC=0.43133, NMI=0.28481, V-Measure=0.28083, ARI=0.21637
+print: ./results/rgbd/9440
+rc ACC=0.43961, NMI=0.29307, V-Measure=0.29019, ARI=0.24510
+print: ./results/rgbd/9450
+rc ACC=0.44928, NMI=0.30037, V-Measure=0.29718, ARI=0.24032
+print: ./results/rgbd/9460
+rc ACC=0.43961, NMI=0.29281, V-Measure=0.28874, ARI=0.21996
+print: ./results/rgbd/9470
+rc ACC=0.44306, NMI=0.29893, V-Measure=0.29546, ARI=0.23304
+print: ./results/rgbd/9480
+rc ACC=0.44099, NMI=0.29341, V-Measure=0.28872, ARI=0.21419
+print: ./results/rgbd/9490
+rc ACC=0.44168, NMI=0.30000, V-Measure=0.29586, ARI=0.22437
+print: ./results/rgbd/9500
